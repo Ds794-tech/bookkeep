@@ -3,11 +3,11 @@ import { FaPhoneAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "r
 
 export default function TopBar() {
     return (
-        <div className="w-full relative bg-white p-3 border-b border-gray-100">
-            <div className="w-full mx-auto flex items-center justify-between px-4 py-3 text-sm">
+        <div className="max-w-7xl mx-auto relative bg-white p-3 border-b border-gray-100">
+            <div className="flex items-center justify-between py-3 text-sm">
 
                 {/* Left Section - Phone & Text */}
-                <div className="fixed bg-fixed top-0 p-4 shadow-md right-0 left-0 z-10 px-36 bg-white mx-auto flex justify-between items-center">
+                <div className="fixed bg-fixed top-0 shadow-md right-0 left-0 z-20 px-32 py-3 bg-white flex justify-between items-center">
                     <div className="flex items-center space-x-2 text-gray-700">
                         <FaPhoneAlt className="text-teal-600" />
                         <span>Need Professional Bookkeeper?</span>

@@ -16,18 +16,54 @@ type ServiceItem = {
 
 const services: Record<ServiceCategory, ServiceItem[]> = {
     "Business Owners": [
-        { title: "Accounting Outsourcing Services", desc: "CPA’s Go-To Firm For A-Z Accounting Needs", icon: <FiBookOpen />, path: '/services/Outsourcing' },
-        { title: "Bookkeeping Services", desc: "Experienced Bookkeepers At Your Service", icon: <FiBookOpen />, path: '/services/bookkeeping' },
-        { title: "Outsourced Tax Preparation", desc: "End-To-End Tax Preparation Support", icon: <FiBookOpen />, path: '/services/tax' },
-        { title: "AR & AP Management", desc: "Comprehensive AR & AP Management Services", icon: <FiSettings />, path: '/services/ap_management' },
-        { title: "Accounting Software Consulting", desc: "Helping Choose The Ideal Accounting Software", icon: <FiSettings />, path: '/services/software_consultant' },
-        { title: "Payroll Management", desc: "Streamline Your CPA’s Payroll Processes", icon: <FiUsers />, path: '/services/payroll' },
-        { title: "Virtual CFO", desc: "Flexible Virtual CFO Solutions", icon: <FiBriefcase />, path: '/services/virtual_cfo' },
-        { title: "Xero & QuickBooks Accounting", desc: "Specialised Xero & QuickBooks Services", icon: <FiSettings />, path: '/services/xero_accounting' },
-        { title: "Audit Support Services", desc: "Get Top-Notch Audit Support Service", icon: <FiUsers />, path: '/services/audit' },
-        { title: "Cost & Operation Analysis", desc: "Drive Profitability & Make Data-Backed Decisions", icon: <FiBriefcase />, path: '/services/cost_analysis' },
-        { title: "Year End Services", desc: "Smoothly Transition Into The New Fiscal Year", icon: <FiBookOpen />, path: '/services/year_end_services' },
-        { title: "Preparation Of Financial Statements", desc: "Helping Keep Financial Statements Handy", icon: <FiBookOpen />, path: '/services/financial_statement' },
+        {
+            title: "Accounting Outsourcing Solutions", desc: "Your trusted partner for complete, end-to-end accounting and financial operations.", icon: <FiBookOpen />,
+            path: '/services/Accounting_Outsourcing_Solutions'
+        },
+        {
+            title: "Bookkeeping & Record Management", desc: "Accurate, organized, and compliant bookkeeping handled by experienced professionals.", icon: <FiBookOpen />,
+            path: '/services/Bookkeeping_Record_Management'
+        },
+        {
+            title: "Outsourced Tax Preparation", desc: "Expert tax planning and filing to ensure maximum savings and full compliance.", icon: <FiBookOpen />,
+            path: '/services/Outsourced_Tax_Preparation'
+        },
+        {
+            title: "Accounts Receivable & Payable Management", desc: "Streamline cash flow with efficient AR & AP processing and tracking.", icon: <FiSettings />,
+            path: '/services/Accounts_Receivable_Payable_Management'
+        },
+        {
+            title: "Accounting Software Implementation", desc: "Helping you choose and integrate the perfect accounting software for your business.", icon: <FiSettings />,
+            path: '/services/Accounting_Software_Implementation'
+        },
+        {
+            title: "Payroll Management Services", desc: "Simplify payroll processing with accurate, timely, and compliant solutions.", icon: <FiUsers />,
+            path: '/services/Payroll_Management_Services'
+        },
+        {
+            title: "Virtual CFO Services", desc: "Flexible CFO-level insights and strategies tailored for growing businesses.", icon: <FiBriefcase />,
+            path: '/services/Virtual_CFO_Services'
+        },
+        {
+            title: "Xero & QuickBooks Accounting", desc: "Specialized support for Xero and QuickBooks setup, migration, and maintenance.", icon: <FiSettings />,
+            path: '/services/Xero_QuickBooks_Accounting'
+        },
+        {
+            title: "Audit Support & Compliance Services", desc: "Comprehensive audit assistance to ensure smooth reviews and accurate reporting.", icon: <FiUsers />,
+            path: '/services/Audit_Support_Compliance'
+        },
+        {
+            title: "Cost & Operational Efficiency Analysis", desc: "Data-backed insights to enhance profitability and streamline operations.", icon: <FiBriefcase />,
+            path: '/services/Cost_Operational_Efficiency'
+        },
+        {
+            title: "Year-End Accounting & Reporting", desc: "Seamless transition into the new financial year with reconciled accounts and reports.", icon: <FiBookOpen />,
+            path: '/services/Year_End_Accounting_Reporting'
+        },
+        {
+            title: "Financial Statement Preparation", desc: "Reliable, detailed financial reports to guide better business decisions.", icon: <FiBookOpen />,
+            path: '/services/Financial_Statement_Preparation'
+        },
     ],
     "Valuation Services": [
         { title: "Business Valuation", desc: "Accurate & Professional Valuation Services", icon: <FiBriefcase />, path: '/services/business_valuation' },
@@ -46,8 +82,8 @@ export default function TopNav() {
     };
 
     return (
-        <header className="w-full">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
+        <header className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2">
@@ -129,7 +165,7 @@ export default function TopNav() {
                         <div className="absolute top-full -left-20 hidden group-hover:flex bg-white shadow-xl rounded-xl p-4 w-[900px] z-50">
 
                             {/* Left Side Category */}
-                            <div className="w-1/4 bg-gray-50 border-r">
+                            {/* <div className="w-1/4 bg-gray-50 border-r">
                                 {Object.keys(services).map((cat) => (
                                     <button
                                         key={cat}
@@ -140,10 +176,10 @@ export default function TopNav() {
                                         {cat}
                                     </button>
                                 ))}
-                            </div>
+                            </div> */}
 
                             {/* Right Side Services */}
-                            <div className="w-3/4 grid grid-cols-2 gap-4 p-6">
+                            <div className="w-full grid grid-cols-2 gap-4 p-6">
                                 {services[activeCategory].map((item, i) => (
                                     <Link
                                         key={i}

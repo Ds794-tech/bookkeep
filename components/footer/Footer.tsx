@@ -7,16 +7,16 @@ export default function FooterNewsletter() {
     <div>
       {/* Newsletter Section */}
       <div className="flex justify-center py-16 bg-white">
-        <div className="bg-white shadow-lg rounded-lg w-full max-w-5xl px-8 py-8">
+        <div className="bg-white shadow-lg rounded-lg w-full max-w-7xl px-8 py-8">
           <h2 className="text-2xl font-semibold text-blue-900 mb-4">Subscribe Our Newsletter</h2>
-          <p className="text-gray-500 mb-6">
+          {/* <p className="text-gray-500 mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          </p>
+          </p> */}
           <form className="flex flex-col md:flex-row gap-4">
             <input
               type="email"
               placeholder="Enter Your Email Address"
-              className="border border-gray-300 rounded-md py-3 px-4 flex-1 outline-none focus:ring-2 focus:ring-blue-300"
+              className="border border-gray-300 rounded-md py-3 w-full font-thin px-4 flex-1 outline-none focus:ring-2 focus:ring-blue-300"
             />
             <button type="submit" className="bg-teal-500 text-white rounded-md py-3 px-8 font-semibold">
               Subscribe
