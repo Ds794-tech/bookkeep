@@ -7,27 +7,28 @@ export default function HeroSection() {
     <section className="relative w-full flex items-center bg-[#123463]">
       {/* Grid layout: left (content box), right (image) */}
       <div className="grid md:grid-cols-2 w-full h-[500px] md:h-[600px]">
-        
+
         {/* Left Side - Content Box */}
         <div className="flex items-center justify-center p-20 md:p-12">
           <div className="bg-white p-8 md:p-12 shadow-lg max-w-lg">
-            <h1 className="text-3xl md:text-4xl font-bold text-[#123463] leading-snug">
-              Bookkeeping <br />
-              Services To Evolve <br />
-              Your <span className="text-teal-500">CAS P</span>
+            <h1 className="text-2xl md:text-3xl font-bold text-[#123463] leading-snug">
+              Scale Your CPA Firm with<br />
+              Offshore Accounting  <br />
+              <span className="text-teal-500">Expertise</span>
             </h1>
             <p className="text-gray-600 mt-4 text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-              ad minim nostrud
+              Access a reliable offshore team from Accuvibe Advisor — ready to handle bookkeeping, payroll, and financial reporting with precision.
             </p>
 
             {/* Buttons */}
             <div className="flex items-center gap-4 mt-6">
               <a href="/contact">
-              <button className="bg-teal-500 cursor-pointer hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-sm shadow">
-                Contact Us
-              </button>
+                <button className="bg-teal-500 cursor-pointer hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-sm shadow">
+                  GET STARTED
+                </button>
+                <div>
+                  <p className="text-sm mt-2">10 HOURS FREE TRIAL</p>
+                </div>
               </a>
 
               {/* <button className="flex items-center gap-2 text-[#123463] font-medium">

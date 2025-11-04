@@ -16,6 +16,7 @@ import ProcessSection from "@/components/process/Process";
 import PartnerSlider from "@/components/partnerSection/PartnerSection";
 import LatestProject from "@/components/ourCase/OurCase";
 import Layout from "./layout/Layout";
+import TestimonialsSection from "./testimonial/Testimonial";
 // import Career from "@/app/career/page";
 
 export default function Home() {
@@ -25,12 +26,13 @@ export default function Home() {
       <AboutSection />
       <BookkeepingSection />
       <ServicesSection />
-      <WhyChooseUs />
-      <PartnerSlider />
-      <LatestProject />
+      {/* <WhyChooseUs /> */}
+      <TestimonialsSection />
+      {/* <PartnerSlider /> */}
+      {/* <LatestProject /> */}
       <ProcessSection />
       <OurConsultant />
-      <BlogSection />
+      {/* <BlogSection /> */}
     </Layout>
   );
 }

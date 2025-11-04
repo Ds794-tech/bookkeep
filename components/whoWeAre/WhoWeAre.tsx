@@ -4,18 +4,18 @@ export default function BookkeepingSection() {
     return (
         <section className="flex relative my-10">
             {/* Left Side - Content */}
-            <div className="w-1/2 my-10">
-                <div className="bg-[#0d1e3a] rounded-2xl h-full px-16 py-24 flex flex-col justify-center text-white">
+            <div className="w-1/2 my-5">
+                <div className="bg-[#0d1e3a] rounded-2xl h-full px-16 py-12 flex flex-col justify-center text-white">
                     <div className="mb-3">
-                        <span className="text-sm font-semibold border-b-2 border-[#22cfcf] pb-1 inline-block">
+                        <span className="text-3xl font-semibold border-b-2 border-[#22cfcf] pb-1 inline-block">
                             Who We Are
                         </span>
                     </div>
-                    <h1 className="text-4xl font-bold mb-5 leading-tight">
-                        We Provide Perfect Solution For All Bookkeeping Services
+                    <h1 className="text-2xl font-thin mb-5 leading-tight">
+                        Redefining Accounting with Expertise, Efficiency & Technology
                     </h1>
-                    <p className="text-[#718096] mb-12 max-w-md leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud xercitation ullamco laboris
+                    <p className="text-[#718096] mb-12 leading-relaxed">
+                        At Accuvibe Advisor, we deliver reliable and scalable outsourced accounting and bookkeeping services for CPA firms and businesses worldwide. With a team of certified professionals and advanced tools like QuickBooks, Xero, and Zoho Books, we ensure precision, compliance, and efficiency in every financial process.
                     </p>
 
                     {/* Progress Bars and Stats */}
@@ -112,7 +112,7 @@ export default function BookkeepingSection() {
                     src="/images/people_conference.jpg"
                     alt="Team business meeting"
                     className="object-cover w-full rounded-2xl h-full"
-                    style={{ maxHeight: 'calc(100vh - 48px)' }}
+                    style={{ maxHeight: 'calc(100vh - 90px)' }}
                 />
             </div>
         </section>
