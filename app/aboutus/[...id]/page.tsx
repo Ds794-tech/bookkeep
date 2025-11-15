@@ -167,9 +167,116 @@ interface FlexibleHiringStep {
     content: string;
 }
 
+/* Explicit types for the about data structure used throughout the component */
+type HeroSection = {
+    title: string;
+    subtitle?: string;
+};
+
+type ExperienceSection = {
+    title: string;
+    description?: string;
+    highlights?: string[];
+};
+
+type SecurityBox = {
+    title: string;
+    description?: string;
+};
+
+type SecuritySection = {
+    leftBox: SecurityBox;
+    rightBox: SecurityBox;
+};
+
+type Stat = {
+    value: string | number;
+    label: string;
+  
+    heading: string;
+    items?: ReactNode[];
+};
+
+type ChallengeColumn = {
+    heading: string;
+    items?: ReactNode[];
+};
+
+type ChallengesSection = {
+    title: string;
+    columns?: ChallengeColumn[];
+};
+
+type IndustryCard = {
+    title: string;
+    description: string;
+};
+
+type IndustriesSection = {
+    title: string;
+    cards: IndustryCard[];
+};
+
+type ProcessStep = {
+    title: string;
+    content: string;
+};
+
+type ProcessSection = {
+    title: string;
+    description?: string;
+    subTitle?: string;
+    subDescription?: string;
+    steps: ProcessStep[];
+};
+
+type FlexibleHiring = {
+    title: string;
+    description?: string;
+    steps: FlexibleHiringStep[];
+};
+
+type OutsourceFeature = {
+    title: string;
+    content: string;
+};
+
+type OutsourceModel = {
+    title: string;
+    description?: string;
+    features: OutsourceFeature[];
+    cta?: string;
+};
+
+type EngagementSection = {
+    title: string;
+    description?: string;
+    subSections: EngagementSub[];
+};
+
+/* ResultsSection was missing — define the shape used in the component */
+type ResultsSection = {
+    title: string;
+    stats: { value: string | number; label: string }[];
+};
+
+type About = {
+    heroSection?: HeroSection;
+    experienceSection?: ExperienceSection;
+    securitySection?: SecuritySection;
+    resultsSection?: ResultsSection;
+    challengesSection?: ChallengesSection;
+    industriesSection?: IndustriesSection;
+    processSection?: ProcessSection;
+    flexibleHiring?: FlexibleHiring;
+    outsourceModel?: OutsourceModel;
+    engagementSection?: EngagementSection;
+};
+
+
 export default function AboutSection() {
 
-    const [selectedAbout, setSelectedAbout] = useState<any>(null);
+    const [selectedAbout, setSelectedAbout] = useState<About| null>(null);
 
     const { id } = useParams();
     const firstParam = Array.isArray(id) ? id[0] : id;
@@ -236,9 +343,9 @@ export default function AboutSection() {
                             <p className="text-gray-600 mb-10 text-lg leading-relaxed">
                                 {selectedAbout.experienceSection.description}
                             </p>
-                            {selectedAbout.experienceSection.highlights.length > 0 && (
+                            {selectedAbout.experienceSection.highlights && selectedAbout.experienceSection.highlights.length > 0 && (
                                 <ul className="space-y-2 text-gray-700 text-lg list-disc list-inside">
-                                    {selectedAbout.experienceSection.highlights.map((item: String, index: number) => (
+                                    {selectedAbout.experienceSection.highlights.map((item: string, index: number) => (
                                         <li key={index}>{item}</li>
                                     ))}
                                 </ul>
