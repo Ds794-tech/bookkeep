@@ -152,8 +152,20 @@
 import Layout from "@/app/layout/Layout";
 import { aboutUsData } from "@/app/utils";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
 import Slider from "react-slick";
+
+type EngagementSub = {
+    title: string;
+    description?: string;
+    whyChoose?: string[];
+    cta?: string;
+};
+
+interface FlexibleHiringStep {
+    title: string;
+    content: string;
+}
 
 export default function AboutSection() {
 
@@ -226,7 +238,7 @@ export default function AboutSection() {
                             </p>
                             {selectedAbout.experienceSection.highlights.length > 0 && (
                                 <ul className="space-y-2 text-gray-700 text-lg list-disc list-inside">
-                                    {selectedAbout.experienceSection.highlights.map((item: any, index: number) => (
+                                    {selectedAbout.experienceSection.highlights.map((item: String, index: number) => (
                                         <li key={index}>{item}</li>
                                     ))}
                                 </ul>
@@ -301,7 +313,7 @@ export default function AboutSection() {
                 {selectedAbout.resultsSection && <section className="bg-blue-50 py-20 px-32 text-center">
                     <h2 className="text-2xl font-semibold mb-20 title-main">{selectedAbout.resultsSection.title}</h2>
                     <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-                        {selectedAbout.resultsSection.stats.map(({ value, label }: any) => (
+                        {selectedAbout.resultsSection.stats.map(({ value, label }: { value: string | number; label: string }) => (
                             <div key={value} className="bg-white p-6 rounded-lg shadow-sm">
                                 <p className="text-2xl font-bold text-blue-600">{value}</p>
                                 <p className="text-gray-600 mt-1">{label}</p>
@@ -321,7 +333,7 @@ export default function AboutSection() {
                         <div className="grid md:grid-cols-2 gap-10">
 
                             {(selectedAbout.challengesSection?.columns ?? []).map(
-                                ({ heading, items }: any) => (
+                                ({ heading, items }: { heading: string; items?: ReactNode[] }) => (
                                     <div
                                         key={heading}
                                         className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all"
@@ -351,7 +363,7 @@ export default function AboutSection() {
 
                                         {/* List */}
                                         <ul className="space-y-3">
-                                            {(items ?? []).map((list: any, idx: number) => (
+                                            {(items ?? []).map((list: ReactNode, idx: number) => (
                                                 <li
                                                     key={idx}
                                                     className="flex items-start gap-2 text-gray-700 leading-relaxed"
@@ -378,7 +390,7 @@ export default function AboutSection() {
 
                         <div className="grid md:grid-cols-1 gap-6 mb-10">
                             <Slider {...settings}>
-                                {selectedAbout.industriesSection.cards.map(({ title, description }: any) => (
+                                {selectedAbout.industriesSection.cards.map(({ title, description }: { title: string; description: string }) => (
                                     <div key={title} className="px-4">  {/* ← GAP between cards */}
                                         <div className="h-full w-full p-6 bg-white rounded-xl shadow-lg border flex flex-col justify-start min-h-[200px] max-h-[260px]">
                                             <p className="font-bold mb-4 text-center text-xl bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">{title}</p>
@@ -419,7 +431,7 @@ export default function AboutSection() {
                             {/* Steps Grid */}
                             <div className="grid sm:grid-cols-2 lg:grid-cols-1">
                                 <Slider {...settings}>
-                                    {selectedAbout.processSection.steps.map((step: any, index: number) => (
+                                    {selectedAbout.processSection.steps.map((step: { title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: number) => (
                                         <div className="px-5 py-5 h-[300px]">
                                             <div
                                                 key={index}
@@ -468,12 +480,12 @@ export default function AboutSection() {
 
                             {/* Cards */}
                             <div className="grid md:grid-cols-3 gap-10">
-                                {selectedAbout.flexibleHiring.steps.map((step: any, index: number) => (
+                                {(selectedAbout.flexibleHiring.steps as FlexibleHiringStep[]).map((step: FlexibleHiringStep, index: number) => (
                                     <div
                                         key={index}
                                         className="bg-white p-8 rounded-2xl border shadow-sm 
-                                   hover:shadow-xl hover:-translate-y-2 
-                                   transition-all duration-300 cursor-pointer relative overflow-hidden"
+                                                           hover:shadow-xl hover:-translate-y-2 
+                                                           transition-all duration-300 cursor-pointer relative overflow-hidden"
                                     >
 
                                         {/* Decorative Top Accent */}
@@ -512,7 +524,7 @@ export default function AboutSection() {
 
                             {/* Feature Cards */}
                             <div className="grid md:grid-cols-3 gap-10">
-                                {selectedAbout.outsourceModel.features.map((feature: any, idx: number) => (
+                                {selectedAbout.outsourceModel.features.map((feature: { title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: number) => (
                                     <div
                                         key={idx}
                                         className="bg-white p-8 rounded-2xl border shadow-sm 
@@ -564,7 +576,7 @@ export default function AboutSection() {
 
                             {/* Sub Sections */}
                             <div className="space-y-12 md:space-y-16">
-                                {selectedAbout.engagementSection.subSections.map((sub: any, i: number) => (
+                                {selectedAbout.engagementSection.subSections.map((sub: EngagementSub, i: number) => (
                                     <div
                                         key={i}
                                         className="bg-white border rounded-2xl p-10 shadow-md hover:shadow-xl 
