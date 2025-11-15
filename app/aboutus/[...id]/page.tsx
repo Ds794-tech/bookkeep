@@ -538,10 +538,9 @@ export default function AboutSection() {
                             {/* Steps Grid */}
                             <div className="grid sm:grid-cols-2 lg:grid-cols-1">
                                 <Slider {...settings}>
-                                    {selectedAbout.processSection.steps.map((step: { title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: number) => (
-                                        <div className="px-5 py-5 h-[300px]">
+                                    {selectedAbout.processSection.steps.map((step: { title: string | number | bigint | boolean | ReactElement<unknown, string> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: number) => (
+                                        <div key={index} className="px-5 py-5 h-[300px]">
                                             <div
-                                                key={index}
                                                 className="bg-white rounded-2xl p-8 h-full w-full min-h-[200px] max-h-[260px] shadow-sm border 
                                    hover:shadow-xl hover:-translate-y-2 
                                    transition-all duration-300 cursor-default"
@@ -631,7 +630,7 @@ export default function AboutSection() {
 
                             {/* Feature Cards */}
                             <div className="grid md:grid-cols-3 gap-10">
-                                {selectedAbout.outsourceModel.features.map((feature: { title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: number) => (
+                                {selectedAbout.outsourceModel.features.map((feature: { title: string | number | bigint | boolean | ReactElement<unknown, string> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string> | Iterable<ReactNode> | null | undefined> | null | undefined; }, idx: number) => (
                                     <div
                                         key={idx}
                                         className="bg-white p-8 rounded-2xl border shadow-sm 
