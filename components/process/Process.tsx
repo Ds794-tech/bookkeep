@@ -2,7 +2,7 @@ import { FaCalendarAlt, FaUsers, FaHandshake } from 'react-icons/fa';
 
 export default function ProcessSection() {
     return (
-        <section className="max-w-6xl mx-auto pt-16 pb-10 px-4">
+        <section className="container mx-auto pt-16 pb-10 px-4">
             {/* Title & Text */}
             <div className="text-center mb-12">
                 <div className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Our Process</div>

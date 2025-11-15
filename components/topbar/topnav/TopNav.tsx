@@ -106,13 +106,13 @@ export default function TopNav() {
                             <div className="flex flex-col space-y-4">
                                 {/* Item 1 */}
                                 <Link
-                                    href="/aboutus/company"
+                                    href="/aboutus/whyChooseAccuvibe"
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition"
                                 >
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-50 text-green-600 text-xl">
                                         <FiHelpCircle />
                                     </div>
-                                    <span className="text-gray-700 font-medium">Why Stanfox?</span>
+                                    <span className="text-gray-700 font-medium">Why Accuvibe Advisor ?</span>
                                 </Link>
 
                                 {/* Item 2 */}

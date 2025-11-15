@@ -2,83 +2,83 @@
 
 import React, { useEffect } from "react";
 import Layout from "../../layout/Layout";
-import { FaFileInvoice, FaCalculator, FaDollarSign, FaChartBar, FaMoneyCheckAlt, FaCog, FaShieldAlt, FaChartLine, FaUserFriends, FaClock, FaTasks, FaTools } from "react-icons/fa";
-import Link from "next/link";
-import { FaCheckCircle } from "react-icons/fa";
+// import { FaFileInvoice, FaCalculator, FaDollarSign, FaChartBar, FaMoneyCheckAlt, FaCog, FaShieldAlt, FaChartLine, FaUserFriends, FaClock, FaTasks, FaTools } from "react-icons/fa";
+// import Link from "next/link";
+// import { FaCheckCircle } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import { serviceData } from "@/app/utils";
 
-const services = [
-    {
-        icon: <FaFileInvoice className="text-4xl text-gray-600" />,
-        title: "AR & AP Management",
-        description:
-            "Ensure smooth cash flow with expert Accounts Receivable and Payable management. We handle invoicing, vendor payments, and collections to maintain financial accuracy and efficiency.",
-    },
-    {
-        icon: <FaCalculator className="text-4xl text-gray-600" />,
-        title: "Bookkeeping Services",
-        description:
-            "Accurate and reliable outsourced bookkeeping that helps you monitor business performance and maintain up-to-date financial records.",
-    },
-    {
-        icon: <FaDollarSign className="text-4xl text-gray-600" />,
-        title: "Bank Reconciliation",
-        description:
-            "We verify and reconcile your bank statements, ensuring error-free financial reporting and strong internal control.",
-    },
-    {
-        icon: <FaChartBar className="text-4xl text-gray-600" />,
-        title: "Financial Reporting & Analysis",
-        description:
-            "Get actionable insights from detailed financial statements and analysis, helping you make confident, data-driven business decisions.",
-    },
-    {
-        icon: <FaMoneyCheckAlt className="text-4xl text-gray-600" />,
-        title: "Payroll Processing",
-        description:
-            "Simplify your payroll operations with our outsourced payroll services — timely, compliant, and tailored to your team’s needs.",
-    },
-    {
-        icon: <FaCog className="text-4xl text-gray-600" />,
-        title: "Tax Preparation & Filing",
-        description:
-            "Stress-free tax filing and compliance — we prepare, file, and optimize deductions to help your business save time and money.",
-    },
-];
+// const services = [
+//     {
+//         icon: <FaFileInvoice className="text-4xl text-gray-600" />,
+//         title: "AR & AP Management",
+//         description:
+//             "Ensure smooth cash flow with expert Accounts Receivable and Payable management. We handle invoicing, vendor payments, and collections to maintain financial accuracy and efficiency.",
+//     },
+//     {
+//         icon: <FaCalculator className="text-4xl text-gray-600" />,
+//         title: "Bookkeeping Services",
+//         description:
+//             "Accurate and reliable outsourced bookkeeping that helps you monitor business performance and maintain up-to-date financial records.",
+//     },
+//     {
+//         icon: <FaDollarSign className="text-4xl text-gray-600" />,
+//         title: "Bank Reconciliation",
+//         description:
+//             "We verify and reconcile your bank statements, ensuring error-free financial reporting and strong internal control.",
+//     },
+//     {
+//         icon: <FaChartBar className="text-4xl text-gray-600" />,
+//         title: "Financial Reporting & Analysis",
+//         description:
+//             "Get actionable insights from detailed financial statements and analysis, helping you make confident, data-driven business decisions.",
+//     },
+//     {
+//         icon: <FaMoneyCheckAlt className="text-4xl text-gray-600" />,
+//         title: "Payroll Processing",
+//         description:
+//             "Simplify your payroll operations with our outsourced payroll services — timely, compliant, and tailored to your team’s needs.",
+//     },
+//     {
+//         icon: <FaCog className="text-4xl text-gray-600" />,
+//         title: "Tax Preparation & Filing",
+//         description:
+//             "Stress-free tax filing and compliance — we prepare, file, and optimize deductions to help your business save time and money.",
+//     },
+// ];
 
-const benefits = [
-    {
-        icon: <FaShieldAlt className="text-xl text-gray-800" />,
-        title: "Focus on Growth, Not Paperwork",
-        description:
-            "Let our experts manage your day-to-day accounting so you can focus on what truly matters — business expansion and client success.",
-    },
-    {
-        icon: <FaChartLine className="text-xl text-gray-800" />,
-        title: "Streamline Your Accounting Operations",
-        description:
-            "Achieve faster, smoother, and automated workflows with our process-driven accounting and technology integration services.",
-    },
-    {
-        icon: <FaUserFriends className="text-xl text-gray-800" />,
-        title: "Boost Profitability with Smarter Insights",
-        description:
-            "Gain actionable financial intelligence that helps identify cost-saving opportunities and improve overall profit margins.",
-    },
-    {
-        icon: <FaClock className="text-xl text-gray-800" />,
-        title: "Access a Trusted Team of Experts",
-        description:
-            "Work with Accuvibe’s certified accountants and finance professionals who bring domain expertise and reliability to your business.",
-    },
-    {
-        icon: <FaTasks className="text-xl text-gray-800" />,
-        title: "Master Modern Accounting Tools",
-        description:
-            "We leverage platforms like QuickBooks, Xero, and Zoho Books to deliver precision, compliance, and real-time financial visibility.",
-    },
-];
+// const benefits = [
+//     {
+//         icon: <FaShieldAlt className="text-xl text-gray-800" />,
+//         title: "Focus on Growth, Not Paperwork",
+//         description:
+//             "Let our experts manage your day-to-day accounting so you can focus on what truly matters — business expansion and client success.",
+//     },
+//     {
+//         icon: <FaChartLine className="text-xl text-gray-800" />,
+//         title: "Streamline Your Accounting Operations",
+//         description:
+//             "Achieve faster, smoother, and automated workflows with our process-driven accounting and technology integration services.",
+//     },
+//     {
+//         icon: <FaUserFriends className="text-xl text-gray-800" />,
+//         title: "Boost Profitability with Smarter Insights",
+//         description:
+//             "Gain actionable financial intelligence that helps identify cost-saving opportunities and improve overall profit margins.",
+//     },
+//     {
+//         icon: <FaClock className="text-xl text-gray-800" />,
+//         title: "Access a Trusted Team of Experts",
+//         description:
+//             "Work with Accuvibe’s certified accountants and finance professionals who bring domain expertise and reliability to your business.",
+//     },
+//     {
+//         icon: <FaTasks className="text-xl text-gray-800" />,
+//         title: "Master Modern Accounting Tools",
+//         description:
+//             "We leverage platforms like QuickBooks, Xero, and Zoho Books to deliver precision, compliance, and real-time financial visibility.",
+//     },
+// ];
 
 const ServicePage = () => {
     const [selectedService, setSelectedService] = React.useState<null | typeof serviceData[keyof typeof serviceData]>(null);
@@ -362,22 +362,22 @@ const ServicePage = () => {
 };
 
 
-type BenefitItemProps = {
-    icon: React.ReactNode;
-    text: string;
-    describe?: string;
-};
+// type BenefitItemProps = {
+//     icon: React.ReactNode;
+//     text: string;
+//     describe?: string;
+// };
 
-const BenefitItem = ({ icon, text, describe }: BenefitItemProps) => (
-    <div className="flex items-center gap-3">
-        <div>
-            <span className="bg-green-50 border border-green-200 rounded-full w-10 h-10 flex items-center justify-center text-lg">{icon}</span>
-            <span className="text-gray-700 font-bold text-indigo-600">{text}</span>
-            <div className="mt-2">
-                <p className="text-sm">{describe}</p>
-            </div>
-        </div>
-    </div>
-);
+// const BenefitItem = ({ icon, text, describe }: BenefitItemProps) => (
+//     <div className="flex items-center gap-3">
+//         <div>
+//             <span className="bg-green-50 border border-green-200 rounded-full w-10 h-10 flex items-center justify-center text-lg">{icon}</span>
+//             <span className="text-gray-700 font-bold text-indigo-600">{text}</span>
+//             <div className="mt-2">
+//                 <p className="text-sm">{describe}</p>
+//             </div>
+//         </div>
+//     </div>
+// );
 
 export default ServicePage;

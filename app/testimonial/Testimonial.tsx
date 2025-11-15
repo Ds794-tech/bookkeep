@@ -65,10 +65,10 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Testimonials Grid */}
-            <div className="relative max-w-7xl mx-auto">
+            <div className="relative container mx-auto">
                 <Slider {...settings}>
                     {testimonials.map((item, index) => (
-                        <div key={index} className="px-4">
+                        <div key={index} className="px-4 py-10">
                             <div
                                 key={index}
                                 className="bg-white shadow-xl rounded-2xl max-w-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 border-t-4 border-[#1387A4]"

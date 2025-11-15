@@ -1247,3 +1247,452 @@ export const serviceData = {
         ],
     },
 }
+
+
+export const aboutUsData = {
+    whyChooseAccuvibe: {
+        heroSection: {
+            title: "Why Accuvibe Advisor",
+            subtitle: "Empower your accounting practice with trusted offshore experts.",
+            backgroundImage: "/images/hero-why-accuvibe.jpg"
+        },
+
+        experienceSection: {
+            image: "/images/team-photo.jpg",
+            title: "Experience the Accuvibe Difference",
+            description: "Our certified professionals ensure precision, efficiency, and accuracy across bookkeeping, payroll, tax, and audit support — enabling your firm to scale confidently and deliver exceptional value to clients.",
+            highlights: [
+                "Timely, accurate, and dependable delivery",
+                "A decade of trusted accounting excellence",
+                "Hiring models that fit your workflow (FTE / Portfolio / On-Demand)",
+                "50+ certified accountants trained in global standards",
+                "Expertise in QuickBooks, Xero, Zoho Books, SAP & more",
+                "Reduce operational costs without compromising quality"
+            ]
+        },
+
+        securitySection: {
+            leftBox: {
+                title: "Your Data is Safe. Your Accounting is Smarter.",
+                description: "We follow strict confidentiality and compliance protocols to ensure accuracy, reliability, and complete peace of mind."
+            },
+            rightBox: {
+                title: "Protected. Encrypted. Trusted — Always.",
+                "description": "256-bit encryption · ISO-certified offices · 24/7 surveillance · Zero data breaches since inception."
+            }
+        },
+
+        resultsSection: {
+            title: "The Results Speak for Themselves",
+            stats: [
+                {
+                    value: "45+",
+                    label: "Dedicated Accountants"
+                },
+                {
+                    value: "10+ Years",
+                    label: "Experience in Accounting"
+                },
+                {
+                    value: "20+",
+                    label: "Countries Served"
+                },
+                {
+                    value: "100+",
+                    label: "CPA Firms Supported"
+                }
+            ]
+        },
+
+        challengesSection: {
+            title: "Challenges You Face & How We Solve Them",
+            columns: [
+                {
+                    heading: "Common Challenges",
+                    items: [
+                        "Capacity to Scale",
+                        "High Overhead Costs",
+                        "Undercharging Clients",
+                        "Lack of Quality Control"
+                    ]
+                },
+                {
+                    heading: "Our Proven Solutions",
+                    items: [
+                        "Guaranteed Cost Savings",
+                        "Scale Seamlessly",
+                        "Ensure Accuracy & Quality",
+                        "Unlock New Service Revenue"
+                    ]
+                }
+            ]
+        },
+
+        industriesSection: {
+            title: "Accounting Expertise Across Industries",
+            cards: [
+                {
+                    title: "Real Estate",
+                    description: "From residential to commercial projects, our accounting experts deliver precise financial tracking, budgeting, and reporting tailored for the real estate sector."
+                },
+                {
+                    title: "Healthcare",
+                    description: "Manage healthcare finances with confidence. Our specialists ensure accurate bookkeeping, compliance, and reporting designed for hospitals, clinics, and medical practitioners."
+                },
+                {
+                    title: "Hotels & Restaurants",
+                    description: "From order to delivery, we streamline financial operations for hotels, cafes, and restaurants — ensuring accurate cost tracking and profit management."
+                },
+                {
+                    title: "Retail & Wholesale",
+                    description: "Simplify inventory, vendor payments, and tax filings. We support retail chains and wholesalers in maintaining profitability and compliance across every transaction."
+                },
+                {
+                    title: "Shipping & Logistics",
+                    description: "Manage your global operations seamlessly. We handle your accounting, billing, and tax compliance with precision, so you can focus on efficient logistics management."
+                },
+                {
+                    title: "Agriculture",
+                    description: "Simplify farm accounting and financial management with our expert support. From expense tracking to profitability insights, we help you grow smarter."
+                },
+                {
+                    title: "Manufacturing",
+                    description: "Gain full visibility into your production costs and profits. Our accounting professionals ensure every process is documented, accurate, and optimized for growth."
+                },
+                {
+                    title: "E-Commerce",
+                    description: "Scale your online business effortlessly. We streamline bookkeeping, automate reconciliations, and ensure tax-ready compliance for every digital transaction."
+                }
+            ]
+        },
+    },
+    work: {
+        processSection: {
+            title: "How We Work — Our Robust Outsourcing Process",
+            description: "We believe that great partnerships begin with understanding. Our robust outsourcing process is designed to align with your firm’s unique needs, ensuring efficiency, transparency, and accuracy at every stage.",
+            subTitle: "Hire Top Accounting Professionals in 5 Easy Steps",
+            subDescription: "Our streamlined 5-step hiring process is designed to make it simple and efficient for CPAs, accounting firms, and businesses to onboard top accounting talent. From initial discussions to ongoing support, Accuvibe Advisor ensures a smooth and transparent experience at every stage.",
+            steps: [
+                {
+                    title: "1. Preliminary Discussion",
+                    content: "We begin by understanding your business goals, workflow requirements, and specific accounting needs. This helps us identify the best-fit professionals for your firm."
+                },
+                {
+                    title: "2. SLAs Setup",
+                    content: "Once we have a clear understanding of your requirements, we define the Service Level Agreements (SLAs) to establish expectations, timelines, and performance standards."
+                },
+                {
+                    title: "3. Contract Agreement",
+                    content: "After setting up the SLAs, we formalize the partnership with a clear and compliant agreement, outlining the scope of work, deliverables, and confidentiality clauses."
+                },
+                {
+                    title: "4. Service Commencement",
+                    content: "Upon signing, our team begins executing assigned tasks with precision, ensuring a seamless transition and smooth integration with your processes."
+                },
+                {
+                    title: "5. Weekly Review Meetings",
+                    content: "We believe in transparent communication. Our weekly review meetings help track progress, address any challenges proactively, and ensure client satisfaction remains our top priority."
+                }
+            ]
+        }
+    },
+    model: {
+        flexibleHiring: {
+            title: "Our Flexible Hiring Models",
+            description: "At Accuvibe Advisor, we understand that every firm operates differently. That’s why we offer three flexible hiring models — designed to help you hire accounting professionals in the most convenient and scalable way possible.",
+            steps: [
+                {
+                    title: "Dedicated Resource (FTE)",
+                    content: "Hire full-time accounting professionals who work exclusively for your firm, seamlessly integrating with your internal team. They function as an extension of your in-house staff, handling all assigned accounting tasks efficiently."
+                },
+                {
+                    title: "Portfolio Management Services",
+                    content: "Access a team of seasoned accountants who collectively manage your clients’ portfolios — ensuring accuracy, compliance, and timely delivery across all projects while you focus on growing your firm."
+                },
+                {
+                    title: "On-Demand Pricing Model",
+                    content: "Choose flexible, pay-as-you-go pricing customized to your workload. Scale services up or down anytime, optimizing cost and efficiency based on your client requirements."
+                }
+            ]
+        },
+        outsourceModel: {
+            title: "Why Choose Accuvibe Advisor for Outsourced Accounting Services",
+            description: "Experience the Accuvibe advantage — a perfect blend of domain expertise, global delivery excellence, and adherence to U.S. accounting standards. Our team of seasoned professionals ensures accuracy, efficiency, and value in every engagement.",
+            cta: "Hire Expert Accountants Today",
+            features: [
+                {
+                    title: "Faster Turnaround Time",
+                    content: "Delivering precise results on time, every time. Our streamlined processes ensure your deadlines are always met."
+                },
+                {
+                    title: "10+ Years of Experience",
+                    content: "Over a decade of trusted service in accounting and outsourcing, supporting CPAs and firms globally."
+                },
+                {
+                    title: "45+ Dedicated Accountants",
+                    content: "A strong, experienced team committed to delivering high-quality accounting support tailored to your firm’s goals."
+                },
+                {
+                    title: "Proficient in Accounting Tools",
+                    content: "Our experts are well-versed in leading platforms like QuickBooks, Xero, Zoho Books, Sage, and more — ensuring seamless workflow integration."
+                },
+                {
+                    title: "Flexible Working Models",
+                    content: "Choose from adaptable hiring models that fit your firm’s needs — full-time, portfolio management, or on-demand."
+                },
+                {
+                    title: "Cost-Efficient Services",
+                    content: "Reduce overhead costs without compromising on accuracy or compliance. Get premium accounting support at an affordable rate."
+                }
+            ]
+        },
+        engagementSection: {
+            title: "Engagement Models to Suit All Your Needs",
+            description: "Enhance your CPA practice with skilled accounting professionals who bring accuracy, reliability, and efficiency to your operations. With Accuvibe Advisor’s simple and flexible hiring process, you can onboard top talent quickly and seamlessly — just the way your firm needs.",
+            subSections: [
+                {
+                    title: "Our Flexible Hiring Models",
+                    description: "At Accuvibe Advisor, we offer three dynamic hiring models designed to make hiring accounting professionals seamless, scalable, and convenient — so your firm gets the right expertise exactly when you need it."
+                },
+                {
+                    title: "Portfolio Management Services",
+                    description: "Our Portfolio Management Services (PMS) are designed to give CPAs and accounting firms complete peace of mind. Assign your client portfolio to Accuvibe Advisor, and our experts will manage all back-office operations with precision and professionalism — allowing you to focus on high-value client engagement.",
+                    whyChoose: [
+                        " Streamlined Back-Office Operations — Simplify workflows and ensure accuracy across all accounting processes.",
+                        "Reduced Workload, Enhanced Efficiency — Free up your time while we handle daily accounting tasks.",
+                        "Dedicated Portfolio Management — Each portfolio is assigned to a trained expert for seamless handling.",
+                        "Professional Management of Client Accounts — Maintain compliance, consistency, and client satisfaction with ease."
+                    ],
+                    cta: "Hire Expert Today →"
+                },
+                {
+                    title: "Dedicated Resource (FTE)",
+                    description: "Hire full-time dedicated accounting professionals who work as an extension of your in-house team. Our experts seamlessly integrate with your firm’s processes, managing all accounting tasks with precision, consistency, and confidentiality — ensuring your operations run effortlessly.",
+                    whyChoose: [
+                        "Add Seasoned Experts — Get access to highly skilled accountants with global experience.",
+                        "Have Complete Control — Manage workflows directly and maintain full operational oversight.",
+                        "Highly Cost-Effective Model — Save up to 60% compared to in-house hiring costs.",
+                        "Get Exclusive Accounting Services — Your dedicated resource works exclusively for your firm, ensuring focus and quality delivery."
+                    ],
+                    cta: "Hire Expert Today →"
+                },
+                {
+                    title: "On-Demand Pricing Model",
+                    description: "Our On-Demand Pricing Model gives your firm the flexibility to scale accounting support exactly when you need it. Choose from a pool of skilled professionals and pay only for the services you use — making it ideal for fluctuating workloads and seasonal demands.",
+                    whyChoose: [
+                        "Cherry-Pick Your Skilled Resource — Select from a team of experts best suited for your project needs.",
+                        "Scale Up or Down as Required — Expand or reduce resources based on your firm’s workflow and client volume.",
+                        "Budget Flexibility: Pay as You Go — Manage your accounting costs efficiently without long-term commitments.",
+                        "Reduced Financial Risks — Keep your operations agile while minimizing overhead and hiring risks."
+                    ],
+                    "cta": "Hire Expert Today →"
+                }
+            ]
+
+        }
+
+    }
+
+
+}
+
+
+export const caseStudy = {
+    caseStudies: [
+        {
+            id: 1,
+            title: "CASE STUDY 1 — CPA Firm Accounting Outsourcing",
+            subtitle:
+                "How a U.S.-Based CPA Firm Cut Costs by 55% & Improved Turnaround Time by 40% with Accuvibe Advisor",
+
+            clientOverview:
+                "A mid-sized CPA firm in Texas, serving 120+ small business clients, struggling with workload spikes during tax season.",
+
+            challengesIntro: "Before partnering with Accuvibe Advisor, the CPA firm faced:",
+            challenges: [
+                "Month-end close taking 10–12 days",
+                "Inconsistent quality across bookkeeping",
+                "High overhead cost ($6,500/month per accountant)",
+                "Difficulty scaling during tax season",
+                "Inability to onboard new clients due to capacity limits"
+            ],
+
+            solutionsIntro:
+                "Accuvibe Advisor assigned a 4-member dedicated offshore accounting team (FTE Model):",
+            solutions: [
+                "Daily bookkeeping on QuickBooks Online",
+                "AR/AP management with automated reminders",
+                "Payroll processing using Gusto",
+                "Monthly financial statements & tax-year preparation",
+                "Weekly review meetings with CPA’s engagement manager"
+            ],
+
+            resultsIntro: "Within 3 months:",
+            results: [
+                "55% cost savings vs. in-house staff",
+                "40% faster turnaround (month-end closed in 5–6 days)",
+                "Accuracy improved to 99.3%",
+                "CPA firm expanded capacity by 32 new clients without hiring locally",
+                "0 errors during IRS review"
+            ],
+
+            testimonial: {
+                quote:
+                    "Accuvibe Advisor has transformed how we operate during tax season. Their team is reliable, accurate, and communicates better than our in-house staff did.",
+                author: "Managing Partner, CPA Firm (Texas)"
+            }
+        },
+
+        {
+            id: 2,
+            title: "CASE STUDY 2 — E-Commerce Accounting & Inventory Management",
+            subtitle:
+                "How Accuvibe Advisor Helped a Fast-Growing E-Commerce Brand Gain Financial Clarity & Reduce Errors by 92%",
+
+            clientOverview:
+                "A Shopify and Amazon-based beauty products brand in California generating $3M/year in revenue.",
+
+            challengesIntro: "The brand struggled with:",
+            challenges: [
+                "Mismatched inventory across Shopify, Amazon & warehouse",
+                "Incorrect COGS calculation",
+                "3–4 weeks delayed financial reporting",
+                "Unreliable in-house bookkeeper",
+                "No consolidated profitability tracking per SKU"
+            ],
+
+            solutionsIntro: "Accuvibe Advisor deployed a Portfolio Management Model, including:",
+            solutions: [
+                "Automated syncing through A2X",
+                "COGS and landed cost tracking",
+                "SKU-level profitability dashboard",
+                "Monthly financial reporting (P&L, Balance Sheet, Cash Flow)",
+                "Forecasting & budgeting support"
+            ],
+
+            results: [
+                "92% reduction in accounting errors",
+                "Financial reports delivered within 5 business days",
+                "Accurate COGS improved gross margin visibility",
+                "Profit leakage identified → resulting in $78,000 recovered annually",
+                "CEO gained weekly snapshots of cash flow"
+            ],
+
+            testimonial: {
+                quote:
+                    "Accuvibe helped us uncover profit leaks we never knew existed. Their reporting is clean, fast, and gives us full control over our numbers.",
+                author: "Founder, Beauty Brand (California)"
+            }
+        },
+
+        {
+            id: 3,
+            title: "CASE STUDY 3 — Construction Company Virtual CFO Services",
+            subtitle:
+                "How Accuvibe Advisor Improved Cash Flow by 38% for a Construction Company Using Virtual CFO Services",
+
+            clientOverview:
+                "A construction & contracting firm in Florida managing 18+ ongoing projects.",
+
+            challengesIntro: "The business struggled with:",
+            challenges: [
+                "No proper job-costing structure",
+                "Poor cash flow visibility",
+                "Delayed vendor payments",
+                "Inaccurate budgeting for multi-month projects",
+                "No dedicated CFO due to cost constraints"
+            ],
+
+            solutionsIntro:
+                "Accuvibe Advisor provided a Part-Time Virtual CFO, supported by 2 senior accountants:",
+            solutions: [
+                "Job-costing setup in QuickBooks Enterprise",
+                "Project-based budgeting + forecasting",
+                "Vendor payment scheduling",
+                "Weekly cash flow projections",
+                "Monthly board-level financial insights"
+            ],
+
+            results: [
+                "38% improvement in cash flow within 6 months",
+                "Eliminated $120,000/year in unnecessary expenses",
+                "Job-costing accuracy improved from 65% → 97%",
+                "Vendor payment delays dropped to zero",
+                "Profit margin increased from 14% → 22%"
+            ],
+
+            testimonial: {
+                quote:
+                    "Their Virtual CFO service is the best investment we made. We now have complete financial control and can plan our projects with accuracy.",
+                author: "Director, Construction Firm (Florida)"
+            }
+        },
+
+        {
+            id: 4,
+            title: "CASE STUDY — Healthcare Accounting Outsourcing",
+            subtitle:
+                "How Accuvibe Advisor Helped a Multi-Clinic Healthcare Group Reduce Revenue Leakages by 35% & Achieve 100% Compliance",
+
+            clientOverview:
+                "A multi-specialty healthcare group operating 3 clinics across New York, treating 28,000+ patients annually. They offer general medicine, urgent care, diagnostics, and outpatient procedures.",
+
+            challengesIntro: "The healthcare group faced significant financial bottlenecks:",
+            challenges: [
+                "Incorrect insurance postings from multiple payors",
+                "Delayed reimbursements due to coding & claim errors",
+                "Underreported revenue from unbilled services",
+                "Lack of monthly financial statements",
+                "No clear visibility on department-wise profitability",
+                "Difficulty handling AR aging & write-offs",
+                "Overburdened administrative staff",
+                "Concern about maintaining HIPAA compliance",
+                "Leadership had no financial visibility"
+            ],
+
+            solutionsIntro:
+                "Accuvibe deployed a Healthcare Accounting Pod consisting of:",
+            team: [
+                "1 Senior Accountant (Healthcare specialist)",
+                "1 Medical Billing & Coding Expert (CPC certified)",
+                "2 AR & Reconciliation Specialists"
+            ],
+
+            deliverablesIntro: "What We Delivered",
+            deliverables: [
+                "Full medical billing cleanup",
+                "CPT & ICD-10 coding review",
+                "Insurance-wise reconciliation",
+                "Weekly AR aging tracker",
+                "Month-end and year-end financial statements",
+                "Cash flow projections",
+                "Compliance-focused data handling (HIPAA protocols followed)"
+            ],
+
+            systemsIntro: "Systems We Managed",
+            systems: [
+                "Kareo",
+                "Athenahealth",
+                "QuickBooks Online",
+                "Clearinghouse portals",
+                "Payor dashboards"
+            ],
+
+            resultsIntro: "Results Achieved (Within 4–6 Months)",
+            results: [
+                "35% reduction in revenue leakage (Identified unbilled & unpaid claims worth $420,000)",
+                "100% compliance with payor requirements (Claim rejection rate dropped from 18% → 3%)",
+                "20% faster reimbursement cycles",
+                "Department-wise P&L and doctor productivity insights enabled full financial visibility",
+                "Admin team workload reduced by 60%",
+                "$280,000 annual savings from offshore support"
+            ],
+
+            testimonial: {
+                quote:
+                    "Accuvibe brought complete financial visibility to our clinics. We finally understand where revenue was leaking and how to stay compliant.",
+                author: "Management, Healthcare Group (New York)"
+            }
+        }
+    ]
+};

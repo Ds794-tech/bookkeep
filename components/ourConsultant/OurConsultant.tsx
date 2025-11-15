@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function OurConsultant() {
     return (
-        <div className='my-10 relative'>
+        <div className='mt-6 relative container mx-auto'>
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-[#061835] z-1 opacity-[.9]'></div>
             <div className='bg-fixed bg-[url(/images/cheer_person_meeting.jpg)] bg-cover h-[500px] pt-20 flex flex-col justify-center items-center space-y-6'>
                 <div>

@@ -2,7 +2,7 @@
 
 export default function BookkeepingSection() {
     return (
-        <section className="flex relative my-10">
+        <section className="flex relative container mx-auto my-10">
             {/* Left Side - Content */}
             <div className="w-1/2 my-5">
                 <div className="bg-[#0d1e3a] rounded-2xl h-full px-16 py-12 flex flex-col justify-center text-white">

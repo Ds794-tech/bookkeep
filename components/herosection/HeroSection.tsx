@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full flex items-center bg-[#123463]">
+    <section className="relative w-full container mx-auto flex items-center bg-[#123463]">
       {/* Grid layout: left (content box), right (image) */}
       <div className="grid md:grid-cols-2 w-full h-[500px] md:h-[600px]">
 
