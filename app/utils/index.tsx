@@ -1696,3 +1696,19 @@ export const caseStudy = {
         }
     ]
 };
+
+
+export const servicesList = [
+    { title: "Accounting Outsourcing Solutions", path: '/services/Accounting_Outsourcing_Solutions' },
+    { title: "Outsourced Tax Preparation", path: '/services/Outsourced_Tax_Preparation' },
+    { title: "Accounting Software Implementation", path: '/services/Accounting_Software_Implementation' },
+    { title: "Virtual CFO Services", path: '/services/Virtual_CFO_Services' },
+    { title: "Audit Support & Compliance Services", path: '/services/Audit_Support_Compliance' },
+    { title: "Year-End Accounting & Reporting", path: '/services/Year_End_Accounting_Reporting' },
+    { title: "Bookkeeping & Record Management", path: '/services/Bookkeeping_Record_Management' },
+    { title: "Accounts Receivable & Payable Management", path: '/services/Accounts_Receivable_Payable_Management' },
+    { title: "Payroll Management Services", path: '/services/Payroll_Management_Services' },
+    { title: "Xero & QuickBooks Accounting", path: '/services/Xero_QuickBooks_Accounting' },
+    { title: "Cost & Operational Efficiency Analysis", path: '/services/Cost_Operational_Efficiency' },
+    { title: "Financial Statement Preparation", path: '/services/Financial_Statement_Preparation' },
+]

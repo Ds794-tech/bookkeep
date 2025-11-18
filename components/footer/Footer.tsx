@@ -1,3 +1,6 @@
+import { servicesList } from "@/app/utils";
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-100 pt-12">
@@ -36,17 +39,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg text-blue-800 mb-3">Services</h3>
             <ul className="space-y-2 text-sm text-gray-700 leading-6">
-              <li>Agentic Automation</li>
-              <li>Generative AI Consulting</li>
-              <li>RPA Automation Solutions</li>
-              <li>RPA as a Managed Service</li>
-              <li>UiPath Professional Services</li>
-              <li className="pb-2 border-b w-[200px]">Strategy Consulting</li>
-              <li>Salesforce Consulting</li>
-              <li>Agentforce Consulting</li>
-              <li>Tableau Consulting</li>
-              <li>MuleSoft</li>
-              <li>Integration Services</li>
+              {
+                servicesList.map((service) => (
+                  <li key={service.title}><a href={service.path} className="hover:text-blue-800">{service.title}</a></li>
+                ))
+              }
             </ul>
           </div>
 
@@ -88,11 +85,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg text-blue-800 mb-3">About Us</h3>
             <ul className="space-y-2 text-sm text-gray-700 leading-6">
-              <li>Careers</li>
-              <li>Company News</li>
-              <li>Our Team</li>
-              <li>Our Partners</li>
-              <li>Our Awards</li>
+              <li><a href="/career" className="hover:text-blue-800">Careers</a></li>
+              {/* <li>Company News</li> */}
+              <li><a href="/aboutus/team" className="hover:text-blue-800">Meet Our Team</a></li>
+              <li><a href="#partner" className="hover:text-blue-800">Our Partners</a></li>
+              <li><a href="#" className="hover:text-blue-800">Our Awards</a></li>
             </ul>
           </div>
 
@@ -103,20 +100,31 @@ export default function Footer() {
       {/* ====== BLACK SOCIAL BAR ====== */}
       <div className="bg-black mt-10">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-3 text-sm text-white">
-          <div>
-            <span>Let’s Connect:</span>
-
-            <span className="cursor-pointer text-white">🔗</span>
-            <span className="cursor-pointer text-white">in</span>
-            <span className="cursor-pointer text-white">▶️</span>
-            <span className="cursor-pointer text-white">✖️</span>
+          <div className="flex flex-col items-center md:flex-row gap-2 md:gap-6">
+            <div>
+              <span className="text-xl">Let’s Connect :</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <a href="#" className="hover:text-teal-800">
+                <FaFacebook className="text-2xl" />
+              </a>
+              <a href="#" className="hover:text-teal-800">
+                <FaTwitter className="text-2xl" />
+              </a>
+              <a href="#" className="hover:text-teal-800">
+                <FaLinkedinIn className="text-2xl" />
+              </a>
+              <a href="#" className="hover:text-teal-800">
+                <FaInstagram className="text-2xl" />
+              </a>
+            </div>
           </div>
           <div className="bg-black text-gray-400 text-xs py-4 text-center">
-            Accelirate® is a Registered Trademark © 2025 All Rights Reserved.
+            AccuVibe Advisor® is a Registered Trademark © 2025 All Rights Reserved.
             <br />
             <div className="flex justify-end mt-2">
-              <span className="cursor-pointer hover:text-gray-200">Sitemap</span> |
-              <span className="cursor-pointer hover:text-gray-200"> Privacy Policy</span>
+              <span className="cursor-pointer hover:text-gray-200">Sitemap </span>&nbsp; |
+              <span className="cursor-pointer hover:text-gray-200"><a href="/privacy-policy">&nbsp; Privacy Policy</a></span>
             </div>
           </div>
         </div>

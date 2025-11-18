@@ -527,7 +527,7 @@ export default function WhyChooseUs() {
                         alt="Professional Team"
                         className="rounded-3xl shadow-2xl w-full object-cover transform hover:scale-[1.02] transition-transform duration-700"
                     />
-                    <div className="absolute -bottom-6 -left-6 bg-[#1387A4] text-white px-8 py-4 rounded-2xl shadow-xl">
+                    <div id="partner" className="absolute -bottom-6 -left-6 bg-[#1387A4] text-white px-8 py-4 rounded-2xl shadow-xl">
                         <p className="text-lg font-semibold">20+ Years of Expertise</p>
                     </div>
                 </div>

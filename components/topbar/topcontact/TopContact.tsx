@@ -12,7 +12,7 @@ export default function TopBar() {
                         <FaPhoneAlt className="text-teal-600" />
                         <span>Need Professional Bookkeeper?</span>
                         <a
-                            href="#"
+                            href="/contact"
                             className="text-teal-700 font-medium underline hover:text-teal-900"
                         >
                             Book Schedule Now
