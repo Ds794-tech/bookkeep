@@ -83,7 +83,7 @@ export default function TopNav() {
 
     return (
         <header className="max-w-7xl mx-auto">
-            <div className="flex items-center justify-between">
+            <div className="md:flex md:items-center md:justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2">

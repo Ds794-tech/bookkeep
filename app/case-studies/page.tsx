@@ -1,141 +1,63 @@
 import Layout from "../layout/Layout";
 import { caseStudy } from "../utils";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function CaseStudies() {
     return (
         <Layout>
             <div className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
 
-                <h1 className="text-4xl md:text-5xl font-extrabold title-main py-10 text-center mb-16 
-                               text-gray-900 tracking-tight">
+                <h1 className="text-4xl md:text-4xl font-extrabold title-main py-20  text-center mb-16 
+                                text-gray-900 tracking-tight">
                     Accuvibe Advisor — Case Studies
                 </h1>
-
-                <div className="space-y-20">
-                    {caseStudy.caseStudies.map((cs, index) => (
-                        <div
-                            key={index}
-                            className="bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.06)]
-                                        border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.10)]
-                                        transition-all duration-500"
-                        >
-                            {/* Title */}
-                            <h2 className="text-3xl pb-4 font-extrabold text-blue-700 tracking-tight">
-                                {cs.title}
-                            </h2>
-                            <p className="text-gray-700 text-lg mt-2">
-                                {cs.subtitle}
-                            </p>
-
-                            {/* Divider */}
-                            <div className="h-[2px] w-24 bg-blue-700/40 mt-4 rounded"></div>
-
-                            {/* Client Overview */}
-                            <div className="mt-10">
-                                <h3 className="text-2xl font-bold text-gray-900">
-                                    Client Overview
-                                </h3>
-                                <p className="text-gray-600 mt-3 leading-relaxed">
-                                    {cs.clientOverview}
-                                </p>
-                            </div>
-
-                            {/* Challenges */}
-                            <div className="mt-10">
-                                <h3 className="text-2xl font-bold text-gray-900">
-                                    Challenges
-                                </h3>
-                                <p className="text-gray-600 mt-2 leading-relaxed">
-                                    {cs.challengesIntro}
-                                </p>
-
-                                <ul className="list-disc ml-8 space-y-2 text-gray-700 mt-4 leading-relaxed">
-                                    {cs.challenges.map((c, i) => (
-                                        <li key={i}>{c}</li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            {/* Solutions */}
-                            <div className="mt-10">
-                                <h3 className="text-2xl font-bold text-gray-900">
-                                    Solutions Implemented
-                                </h3>
-                                <p className="text-gray-600 mt-2 leading-relaxed">
-                                    {cs.solutionsIntro}
-                                </p>
-
-                                {cs.team && (
-                                    <ul className="list-disc ml-8 space-y-2 text-gray-700 mt-3 leading-relaxed">
-                                        {cs.team.map((t, i) => (
-                                            <li key={i}>{t}</li>
-                                        ))}
-                                    </ul>
-                                )}
-
-                                <ul className="list-disc ml-8 space-y-2 text-gray-700 mt-4 leading-relaxed">
-                                    {cs.solutions?.map((s, i) => (
-                                        <li key={i}>{s}</li>
-                                    ))}
-                                </ul>
-
-                                {cs.deliverables && (
-                                    <>
-                                        <h4 className="mt-6 font-semibold text-lg text-gray-900">
-                                            {cs.deliverablesIntro}
-                                        </h4>
-                                        <ul className="list-disc ml-8 space-y-2 text-gray-700 mt-3">
-                                            {cs.deliverables.map((d, i) => (
-                                                <li key={i}>{d}</li>
-                                            ))}
-                                        </ul>
-                                    </>
-                                )}
-
-                                {cs.systems && (
-                                    <>
-                                        <h4 className="mt-6 font-semibold text-lg text-gray-900">
-                                            {cs.systemsIntro}
-                                        </h4>
-                                        <ul className="list-disc ml-8 space-y-2 text-gray-700 mt-3">
-                                            {cs.systems.map((s, i) => (
-                                                <li key={i}>{s}</li>
-                                            ))}
-                                        </ul>
-                                    </>
-                                )}
-                            </div>
-
-                            {/* Results */}
-                            <div className="mt-10">
-                                <h3 className="text-2xl font-bold text-gray-900">
-                                    Results Achieved
-                                </h3>
-                                <p className="text-gray-600 mt-2 leading-relaxed">
-                                    {cs.resultsIntro}
-                                </p>
-
-                                <ul className="list-disc ml-8 space-y-2 text-gray-700 mt-4">
-                                    {cs.results.map((r, i) => (
-                                        <li key={i}>{r}</li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            {/* Testimonial Box */}
-                            <div className="mt-12 border-l-4 border-blue-600 bg-gradient-to-r from-blue-50 to-blue-100 
-                                            p-6 rounded-xl shadow-inner">
-                                <p className="italic text-gray-800 text-lg leading-relaxed">
-                                    “{cs.testimonial.quote}”
-                                </p>
-                                <p className="font-semibold mt-3 text-blue-900">
-                                    — {cs.testimonial.author}
-                                </p>
-                            </div>
+                <section className="py-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
+                            {caseStudy.caseStudies.map((c, i) => (
+                                <CaseStudyCard key={i} {...c} />
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                </section>
             </div>
         </Layout>
     );
+}
+
+function CaseStudyCard({ ...rest }) {
+    return (
+        <article className="group bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden">
+            <Link href={`/case-studies/${rest.id}`} className="block">
+                <div className="relative w-full h-52 sm:h-40 md:h-44 lg:h-56">
+                    {/* Use next/image for optimized images. If using external URLs, make sure the domain is allowed in next.config.js */}
+                    <Image
+                        src={"/images/manager_working.jpg"}
+                        alt={rest.title}
+                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        priority={rest.priority}
+                    />
+                </div>
+
+
+                <div className="p-4 sm:p-5">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 line-clamp-2">{rest.title}</h3>
+                    <p className="mt-2 text-sm text-gray-600 line-clamp-3">{rest.description}</p>
+
+
+                    <div className="mt-4">
+                        <span className="inline-flex items-center text-sm font-medium text-indigo-600 group-hover:underline">
+                            Read case study
+                            <svg className="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </Link>
+        </article>
+    )
 }
