@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-700 leading-6">
               {
                 servicesList.map((service) => (
-                  <li key={service.title}><a href={service.path} className="hover:text-blue-800">{service.title}</a></li>
+                  <li key={service.title}><Link href={service.path} className="hover:text-blue-800">{service.title}</Link></li>
                 ))
               }
             </ul>
@@ -86,11 +86,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg text-blue-800 mb-3">About Us</h3>
             <ul className="space-y-2 text-sm text-gray-700 leading-6">
-              <li><a href="/career" className="hover:text-blue-800">Careers</a></li>
+              <li><Link href="/career" className="hover:text-blue-800">Careers</Link></li>
               {/* <li>Company News</li> */}
-              <li><a href="/aboutus/team" className="hover:text-blue-800">Meet Our Team</a></li>
-              <li><a href="#partner" className="hover:text-blue-800">Our Partners</a></li>
-              <li><a href="#" className="hover:text-blue-800">Our Awards</a></li>
+              <li><Link href="/aboutus/team" className="hover:text-blue-800">Meet Our Team</Link></li>
+              <li><Link href="#partner" className="hover:text-blue-800">Our Partners</Link></li>
+              <li><Link href="#" className="hover:text-blue-800">Our Awards</Link></li>
             </ul>
           </div>
 
@@ -106,18 +106,18 @@ export default function Footer() {
               <span className="text-xl">Let’s Connect :</span>
             </div>
             <div className="flex items-center justify-between space-x-3">
-              <a href="#" className="hover:text-teal-800">
+              <Link href="#" className="hover:text-teal-800">
                 <FaFacebook className="md:text-2xl" />
-              </a>
-              <a href="#" className="hover:text-teal-800">
+              </Link>
+              <Link href="#" className="hover:text-teal-800">
                 <FaTwitter className="md:text-2xl" />
-              </a>
-              <a href="#" className="hover:text-teal-800">
+              </Link>
+              <Link href="#" className="hover:text-teal-800">
                 <FaLinkedinIn className="md:text-2xl" />
-              </a>
-              <a href="#" className="hover:text-teal-800">
+              </Link>
+              <Link href="#" className="hover:text-teal-800">
                 <FaInstagram className="md:text-2xl" />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="bg-black text-gray-400 text-xs py-4 text-center">
