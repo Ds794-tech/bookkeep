@@ -473,7 +473,7 @@ import PartnerSlider from "../partnerSection/PartnerSection";
 
 export default function WhyChooseUs() {
     return (
-        <section className="bg-gradient-to-b from-[#f7fafb] via-white to-[#eaf6f9] py-24 px-6 md:px-20 overflow-hidden">
+        <section className="bg-gradient-to-b from-[#f7fafb] via-white to-[#eaf6f9] px-3 py-12 md:py-24 md:px-6 md:px-20 overflow-hidden">
             {/* Header */}
             <div className="text-center mb-20">
                 <h3 className="text-[#1387A4] text-2xl font-semibold inline-block border-b-4 border-[#1387A4] pb-1 mb-5">
@@ -534,8 +534,8 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Partner Section */}
-            <div className="relative container mx-auto bg-white rounded-xl shadow-xl py-16">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#1387A4] text-white px-8 py-2 rounded-full text-lg font-medium">
+            <div className="relative md:container md:mx-auto md:bg-white rounded-xl md:shadow-xl md:py-16">
+                <div className="md:absolute -top-4 left-1/2 text-center transform md:-translate-x-1/2 bg-[#1387A4] text-white px-8 py-2 rounded-full text-lg font-medium">
                     Our Trusted Partners
                 </div>
 

@@ -9,7 +9,6 @@ export default function TestimonialsSection() {
         autoplay: true,
         autoplaySpeed: 2000,
         speed: 1000,
-        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
@@ -18,6 +17,7 @@ export default function TestimonialsSection() {
             { breakpoint: 1024, settings: { slidesToShow: 4 } },
             { breakpoint: 768, settings: { slidesToShow: 3 } },
             { breakpoint: 480, settings: { slidesToShow: 2 } },
+            { breakpoint: 320, settings: { slidesToShow: 2 } },
         ],
     };
 
@@ -47,9 +47,9 @@ export default function TestimonialsSection() {
     ];
 
     return (
-        <section className="bg-gradient-to-b from-white to-[#f8fafb] py-20 px-6 md:px-20">
+        <section className="bg-gradient-to-b from-white to-[#f8fafb] px-2 py-10 md:py-20 md:px-6 md:px-20">
             {/* Section Header */}
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                     Testimonials
                 </h2>
@@ -65,13 +65,13 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Testimonials Grid */}
-            <div className="relative container mx-auto">
+            <div className="relative md:container md:mx-auto">
                 <Slider {...settings}>
                     {testimonials.map((item, index) => (
-                        <div key={index} className="px-4 py-10">
+                        <div key={index} className="px-2 md:px-4 md:py-10">
                             <div
                                 key={index}
-                                className="bg-white shadow-xl rounded-2xl max-w-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 border-t-4 border-[#1387A4]"
+                                className="bg-white shadow-sm md:shadow-xl rounded-2xl max-w-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300 border-t-4 border-[#1387A4]"
                             >
                                 {/* <div className="flex items-center mb-6">
                                     <img

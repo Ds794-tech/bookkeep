@@ -7,9 +7,18 @@ export default function HeroSection() {
     <section className="relative w-full container mx-auto flex items-center bg-[#123463]">
       {/* Grid layout: left (content box), right (image) */}
       <div className="grid md:grid-cols-2 w-full h-[500px] md:h-[600px]">
-
+        <div className="block md:hidden relative w-full">
+          <Image
+            src="/images/business_conference.jpg" // replace with your image file in public/
+            alt="Team working"
+            width={600}
+            height={600}
+            // fill
+            className="object-cover relative"
+          />
+        </div>
         {/* Left Side - Content Box */}
-        <div className="flex items-center justify-center p-20 md:p-12">
+        <div className="flex items-center justify-center md:p-12">
           <div className="bg-white p-8 md:p-12 shadow-lg max-w-lg">
             <h1 className="text-2xl md:text-3xl font-bold text-[#123463] leading-snug">
               Scale Your CPA Firm with<br />
@@ -42,7 +51,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Side - Image */}
-        <div className="relative w-full">
+        <div className="hidden md:block relative w-full">
           <Image
             src="/images/business_conference.jpg" // replace with your image file in public/
             alt="Team working"

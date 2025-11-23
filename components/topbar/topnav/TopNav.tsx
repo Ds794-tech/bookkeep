@@ -86,23 +86,23 @@ export default function TopNav() {
             <div className="md:flex md:items-center md:justify-between">
 
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center justify-center md:block space-x-2">
                     <Image src="/images/logo.jpeg" alt="Logo" width={190} height={40} />
                 </Link>
 
                 {/* Navigation */}
-                <nav className="flex items-center space-x-8 text-gray-800 font-medium">
+                <nav className="md:flex md:items-center text-center space-x-8 text-gray-800 font-medium">
 
                     {/* About Us dropdown */}
-                    <div className="relative group">
+                    <div className="relative group flex justify-center">
                         {/* Menu Button */}
-                        <button id="topnav" className="flex items-center cursor-pointer space-x-1 hover:text-gray-900">
+                        <button id="topnav" className="flex items-center justify-center cursor-pointer space-x-1 hover:text-gray-900">
                             <span>About Us</span>
                             <span><FiChevronDown /></span>
                         </button>
 
                         {/* Popup Menu */}
-                        <div className="absolute top-full -left-10 hidden group-hover:block bg-white shadow-xl rounded-xl p-4 w-72 z-50">
+                        <div className="md:absolute text-center top-full -left-10 hidden group-hover:block bg-white shadow-xl rounded-xl p-4 w-72 z-50">
                             <div className="flex flex-col space-y-4">
                                 {/* Item 1 */}
                                 <Link
@@ -152,20 +152,19 @@ export default function TopNav() {
                     </div>
 
                     {/* Services mega dropdown */}
-                    <div className="relative group">
+                    <div className="relative group flex justify-center">
                         <button
                             id="topnav"
                             onClick={() => toggleMenu("services")}
+                            onTouchStart={() => toggleMenu("services")}
                             className="flex cursor-pointer items-center space-x-1 hover:text-gray-900"
                         >
                             <span>Services</span>
                             <FiChevronDown />
-                        </button>
+                            <div className="md:absolute top-full -left-20 hidden group-hover:flex bg-white shadow-xl rounded-xl p-4 w-[900px] z-50">
 
-                        <div className="absolute top-full -left-20 hidden group-hover:flex bg-white shadow-xl rounded-xl p-4 w-[900px] z-50">
-
-                            {/* Left Side Category */}
-                            {/* <div className="w-1/4 bg-gray-50 border-r">
+                                {/* Left Side Category */}
+                                {/* <div className="w-1/4 bg-gray-50 border-r">
                                 {Object.keys(services).map((cat) => (
                                     <button
                                         key={cat}
@@ -178,32 +177,40 @@ export default function TopNav() {
                                 ))}
                             </div> */}
 
-                            {/* Right Side Services */}
-                            <div className="w-full grid grid-cols-2 gap-4 p-6">
-                                {services[activeCategory].map((item, i) => (
-                                    <Link
-                                        key={i}
-                                        href={item.path || '#'}
-                                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition"
-                                    >
-                                        <div className="text-green-600 text-xl">{item.icon}</div>
-                                        <div>
-                                            <h4 className="font-semibold text-sm">{item.title}</h4>
-                                            <p className="text-xs text-gray-500">{item.desc}</p>
-                                        </div>
-                                    </Link>
-                                ))}
+                                {/* Right Side Services */}
+                                <div className="w-full grid grid-cols-2 gap-4 p-6">
+                                    {services[activeCategory].map((item, i) => (
+                                        <Link
+                                            key={i}
+                                            href={item.path || '#'}
+                                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition"
+                                        >
+                                            <div className="text-green-600 text-xl">{item.icon}</div>
+                                            <div>
+                                                <h4 className="font-semibold text-sm">{item.title}</h4>
+                                                <p className="text-xs text-gray-500">{item.desc}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </button>
 
-                    <Link href="/case-studies" className="hover:text-gray-900">Cases</Link>
-                    <Link href="/career" className="hover:text-gray-900">Career</Link>
-                    <Link href="/contact" className="hover:text-gray-900">Contact Us</Link>
+
+                    </div>
+                    <div className="relative group">
+                        <Link href="/case-studies" className="hover:text-gray-900">Cases</Link>
+                    </div>
+                    <div className="relative group">
+                        <Link href="/career" className="hover:text-gray-900">Career</Link>
+                    </div>
+                    <div className="relative group">
+                        <Link href="/contact" className="hover:text-gray-900">Contact Us</Link>
+                    </div>
                 </nav>
 
                 {/* CTA Button */}
-                <div className="bg-[#123463] text-white p-4 shadow-md flex items-center space-x-4 w-fit">
+                <div className="bg-[#123463] text-white p-4 shadow-md flex items-center justify-center space-x-4 md:w-fit">
                     {/* Icon */}
                     <FiMessageSquare className="text-teal-400 text-4xl" />
 

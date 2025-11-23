@@ -2,10 +2,20 @@
 
 export default function BookkeepingSection() {
     return (
-        <section className="flex relative container mx-auto my-10">
+        <section className="md:flex relative md:container md:mx-auto md:my-10">
             {/* Left Side - Content */}
-            <div className="w-1/2 my-5">
-                <div className="bg-[#0d1e3a] rounded-2xl h-full px-16 py-12 flex flex-col justify-center text-white">
+
+            <div className="w-full md:hidden block md:w-1/2 md:absolute md:right-0 md:top-0 md:bottom-0">
+                <img
+                    src="/images/people_conference.jpg"
+                    alt="Team business meeting"
+                    className="object-cover w-full md:rounded-2xl h-full"
+                    style={{ maxHeight: 'calc(100vh - 90px)' }}
+                />
+            </div>
+
+            <div className="w-full md:w-1/2 md:my-5">
+                <div className="bg-[#0d1e3a] md:rounded-2xl h-full px-5 py-5 md:px-16 md:py-12 flex flex-col justify-center text-white">
                     <div className="mb-3">
                         <span className="text-3xl font-semibold border-b-2 border-[#22cfcf] pb-1 inline-block">
                             Who We Are
@@ -38,7 +48,7 @@ export default function BookkeepingSection() {
                     </div>
 
                     {/* Features List and Highlight Box */}
-                    <div className="flex gap-8">
+                    <div className="md:flex md:gap-8">
                         {/* Features List */}
                         <ul className="space-y-3 flex-1">
                             <li className="flex items-center gap-3">
@@ -83,7 +93,7 @@ export default function BookkeepingSection() {
                         </ul>
 
                         {/* Highlight Box */}
-                        <div className="bg-[#22cfcf] text-[#0d1e3a] p-6 rounded flex-1 max-w-xs flex flex-col justify-center gap-2">
+                        <div className="bg-[#22cfcf] text-[#0d1e3a] mt-10 md:mt-0 p-6 rounded flex-1 max-w-xs flex flex-col justify-center gap-2">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -107,7 +117,7 @@ export default function BookkeepingSection() {
             </div>
 
             {/* Right Side - Image */}
-            <div className="w-1/2 absolute right-0 top-0 bottom-0">
+            <div className="w-full hidden md:block md:w-1/2 md:absolute md:right-0 md:top-0 md:bottom-0">
                 <img
                     src="/images/people_conference.jpg"
                     alt="Team business meeting"

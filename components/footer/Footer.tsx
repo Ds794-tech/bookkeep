@@ -99,23 +99,23 @@ export default function Footer() {
 
       {/* ====== BLACK SOCIAL BAR ====== */}
       <div className="bg-black mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center gap-3 text-sm text-white">
-          <div className="flex flex-col items-center md:flex-row gap-2 md:gap-6">
+        <div className="md:max-w-7xl md:mx-auto px-6 py-2 md:flex md:justify-between items-center gap-3 text-sm text-white">
+          <div className="flex flex-col items-center flex-row gap-10 md:gap-6">
             <div>
               <span className="text-xl">Let’s Connect :</span>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-between space-x-3">
               <a href="#" className="hover:text-teal-800">
-                <FaFacebook className="text-2xl" />
+                <FaFacebook className="md:text-2xl" />
               </a>
               <a href="#" className="hover:text-teal-800">
-                <FaTwitter className="text-2xl" />
+                <FaTwitter className="md:text-2xl" />
               </a>
               <a href="#" className="hover:text-teal-800">
-                <FaLinkedinIn className="text-2xl" />
+                <FaLinkedinIn className="md:text-2xl" />
               </a>
               <a href="#" className="hover:text-teal-800">
-                <FaInstagram className="text-2xl" />
+                <FaInstagram className="md:text-2xl" />
               </a>
             </div>
           </div>
