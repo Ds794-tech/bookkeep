@@ -2,6 +2,7 @@
 
 import { JSX, useState } from "react";
 import { FiChevronDown, FiMessageSquare, FiBookOpen, FiSettings, FiUsers, FiBriefcase, FiClipboard, FiHelpCircle } from "react-icons/fi";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -75,23 +76,126 @@ const services: Record<ServiceCategory, ServiceItem[]> = {
 
 export default function TopNav() {
     const [openMenu, setOpenMenu] = useState<string | null>(null);
+    const [icon, setIcon] = useState<Boolean>(false);
     const [activeCategory, setActiveCategory] = useState<ServiceCategory>("Business Owners");
 
     const toggleMenu = (menu: string) => {
         setOpenMenu(openMenu === menu ? null : menu);
     };
 
+    const iconHandler = () => {
+        setIcon(!icon);
+    }
+
     return (
         <header className="max-w-7xl mx-auto">
-            <div className="md:flex md:items-center md:justify-between">
+            <div className="flex relative items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center justify-center md:block space-x-2">
                     <Image src="/images/logo.jpeg" alt="Logo" width={190} height={40} />
                 </Link>
+                <button
+                    className="pr-5 md:hidden"
+                    onClick={() => iconHandler()}
+                >
+                    {icon ? (
+                        <FaTimes className="text-2xl" />
+                    ) : (
+                        <FaBars className="text-2xl" />
+                    )}
+                </button>
+                <nav
+                    className={`absolute ${icon ? "" : "hidden"} top-20 left-0 right-0 bg-white shadow-lg md:hidden z-50`}
+                >
+                    <div className="flex flex-col px-6 py-6 space-y-4 text-gray-900">
+
+                        {/* About Us */}
+                        <button
+                            className="flex items-center justify-between text-lg font-medium py-2"
+                            onClick={() => toggleMenu("about")}
+                        >
+                            <span>About Us</span>
+                            <FiChevronDown
+                                className={`transition-transform ${openMenu === "about" ? "rotate-180" : ""
+                                    }`}
+                            />
+                        </button>
+
+                        {/* ABOUT US Dropdown */}
+                        {openMenu === "about" && (
+                            <div className="ml-3 mt-2 border-l border-gray-200 pl-4 space-y-4">
+                                {/* Item */}
+                                <Link
+                                    href="/aboutus/whyChooseAccuvibe"
+                                    className="flex items-center space-x-3"
+                                >
+                                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
+                                        <FiHelpCircle />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">Why Accuvibe Advisor?</span>
+                                </Link>
+
+                                <Link href="/aboutus/work" className="flex items-center space-x-3">
+                                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
+                                        <FiSettings />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">How We Work</span>
+                                </Link>
+
+                                <Link href="/aboutus/team" className="flex items-center space-x-3">
+                                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
+                                        <FiUsers />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">Meet The Team</span>
+                                </Link>
+
+                                <Link href="/aboutus/model" className="flex items-center space-x-3">
+                                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 text-xl">
+                                        <FiClipboard />
+                                    </div>
+                                    <span className="text-gray-700 font-medium">Engagement Model</span>
+                                </Link>
+                            </div>
+                        )}
+
+                        {/* Services */}
+                        <button
+                            className="flex items-center justify-between text-lg font-medium py-2"
+                            onClick={() => toggleMenu("services")}
+                        >
+                            <span>Services</span>
+                            <FiChevronDown
+                                className={`transition-transform ${openMenu === "services" ? "rotate-180" : ""
+                                    }`}
+                            />
+                        </button>
+
+                        {/* SERVICES Dropdown */}
+                        {openMenu === "services" && (
+                            <div className="ml-3 mt-2 border-l border-gray-200 pl-4 space-y-3">
+                                {services["Business Owners"].map((item, i) => (
+                                    <Link
+                                        key={i}
+                                        href={item.path || "#"}
+                                        className="flex flex-col"
+                                    >
+                                        <span className="font-medium">{item.title}</span>
+                                        <span className="text-xs text-gray-500">{item.desc}</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        )}
+
+                        {/* Simple Links */}
+                        <Link href="/case-studies" className="text-lg font-medium py-1">Cases</Link>
+                        <Link href="/career" className="text-lg font-medium py-1">Career</Link>
+                        <Link href="/contact" className="text-lg font-medium py-1">Contact Us</Link>
+                    </div>
+                </nav>
 
                 {/* Navigation */}
-                <nav className="md:flex md:items-center text-center space-x-8 text-gray-800 font-medium">
+                <nav className="md:flex hidden md:block md:items-center text-center space-x-8 text-gray-800 font-medium">
 
                     {/* About Us dropdown */}
                     <div className="relative group flex justify-center">
@@ -210,7 +314,7 @@ export default function TopNav() {
                 </nav>
 
                 {/* CTA Button */}
-                <div className="bg-[#123463] text-white p-4 shadow-md flex items-center justify-center space-x-4 md:w-fit">
+                <div className="bg-[#123463] hidden md:block text-white p-4 shadow-md flex items-center justify-center space-x-4 md:w-fit">
                     {/* Icon */}
                     <FiMessageSquare className="text-teal-400 text-4xl" />
 

@@ -475,11 +475,11 @@ export default function WhyChooseUs() {
     return (
         <section className="bg-gradient-to-b from-[#f7fafb] via-white to-[#eaf6f9] px-3 py-12 md:py-24 md:px-6 md:px-20 overflow-hidden">
             {/* Header */}
-            <div className="text-center mb-20">
-                <h3 className="text-[#1387A4] text-2xl font-semibold inline-block border-b-4 border-[#1387A4] pb-1 mb-5">
+            <div className="text-center mb-10 md:mb-20">
+                <h3 className="text-[#1387A4] text-xl md:text-2xl font-semibold inline-block border-b-4 border-[#1387A4] pb-1 mb-5">
                     Why Choose Us
                 </h3>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight max-w-5xl mx-auto">
+                <h2 className="text-2xl md:text-5xl font-extrabold text-gray-900 leading-tight max-w-5xl mx-auto">
                     Trusted by <span className="text-[#1387A4]">2,000+</span> Businesses Worldwide
                 </h2>
                 <p className="text-gray-600 max-w-3xl mx-auto mt-6 text-lg leading-relaxed">
@@ -493,7 +493,7 @@ export default function WhyChooseUs() {
             <div className="container mx-auto mb-28 grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Text */}
                 <div data-aos="fade-right">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                    <h3 className="text-2xl text-center md:text-left md:text-3xl font-bold text-gray-900 mb-6">
                         Experience the <span className="text-[#1387A4]">Accuvibe Advantage</span>
                     </h3>
                     {/* <p className="text-gray-600 mb-8 text-lg">

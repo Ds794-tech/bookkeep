@@ -17,11 +17,11 @@ export default function BookkeepingSection() {
             <div className="w-full md:w-1/2 md:my-5">
                 <div className="bg-[#0d1e3a] md:rounded-2xl h-full px-5 py-5 md:px-16 md:py-12 flex flex-col justify-center text-white">
                     <div className="mb-3">
-                        <span className="text-3xl font-semibold border-b-2 border-[#22cfcf] pb-1 inline-block">
+                        <span className="text-2xl md:text-3xl font-semibold border-b-2 border-[#22cfcf] pb-1 inline-block">
                             Who We Are
                         </span>
                     </div>
-                    <h1 className="text-2xl font-thin mb-5 leading-tight">
+                    <h1 className="text-xl md:text-2xl font-thin mb-5 leading-tight">
                         Redefining Accounting with Expertise, Efficiency & Technology
                     </h1>
                     <p className="text-[#718096] mb-12 leading-relaxed">

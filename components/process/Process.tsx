@@ -5,9 +5,9 @@ export default function ProcessSection() {
         <section className="md:container md:mx-auto pt-16 px-3 md:pb-10 md:px-4">
             {/* Title & Text */}
             <div className="text-center md:mb-12">
-                <div className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Our Process</div>
+                <div className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">Our Process</div>
                 <div className="w-16 h-1 mx-auto bg-blue-500 mb-2"></div>
-                <h2 className="text-4xl font-bold text-blue-900 mb-3">Simple Steps to Get Started with Accuvibe Advisor</h2>
+                <h2 className="text-xl md:text-4xl font-bold text-blue-900 mb-3">Simple Steps to Get Started with Accuvibe Advisor</h2>
                 <p className="text-gray-500 max-w-xl mx-auto">
                     Outsourcing your accounting has never been easier. We make the process simple, transparent, and completely secure — so you can focus on your business while we handle the numbers.
                 </p>

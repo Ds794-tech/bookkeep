@@ -4,7 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 export default function AboutSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6">
 
         {/* Left Image with Quote */}
@@ -17,17 +17,17 @@ export default function AboutSection() {
             className="rounded-md h-full object-cover"
           />
           {/* Quote Box */}
-          <div className="absolute bottom-6 left-6 bg-white shadow-lg p-6 max-w-sm">
+          <div className="absolute -bottom-5 left-0 md:bottom-6 md:left-6 bg-white shadow-lg p-6 max-w-sm">
             <p className="italic text-gray-600 border-l-2 border-teal-500 pl-3">
               CA. Jitendra Vageriya
             </p>
-            <p className="mt-3 font-medium text-gray-800">Founder, Accuvibe Advisor</p>
+            <p className="mt-2 md:mt-3 font-medium text-gray-800">Founder, Accuvibe Advisor</p>
           </div>
         </div>
 
         {/* Right Content */}
         <div className="flex flex-col justify-center">
-          <p className="text-teal-600 mb-2 font-bold text-3xl">Meet Our Founder</p>
+          <p className="text-teal-600 mb-2 font-bold text-xl md:text-3xl">Meet Our Founder</p>
           {/* <h2 className="text-3xl md:text-4xl font-bold text-[#123463] mb-4">
             We Have 25 Years of Experience in <br /> Bookkeeping Service Company
           </h2> */}

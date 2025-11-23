@@ -19,7 +19,7 @@ export default function HeroSection() {
         </div>
         {/* Left Side - Content Box */}
         <div className="flex items-center justify-center md:p-12">
-          <div className="bg-white p-8 md:p-12 shadow-lg max-w-lg">
+          <div className="bg-white px-3 py-12 md:p-12 shadow-lg max-w-lg">
             <h1 className="text-2xl md:text-3xl font-bold text-[#123463] leading-snug">
               Scale Your CPA Firm with<br />
               Offshore Accounting  <br />

@@ -192,7 +192,7 @@ type SecuritySection = {
 type Stat = {
     value: string | number;
     label: string;
-  
+
     heading: string;
     items?: ReactNode[];
 };
@@ -276,7 +276,7 @@ type About = {
 
 export default function AboutSection() {
 
-    const [selectedAbout, setSelectedAbout] = useState<About| null>(null);
+    const [selectedAbout, setSelectedAbout] = useState<About | null>(null);
 
     const { id } = useParams();
     const firstParam = Array.isArray(id) ? id[0] : id;
@@ -287,7 +287,6 @@ export default function AboutSection() {
         autoplay: true,
         autoplaySpeed: 2000,
         speed: 1000,
-        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
@@ -296,6 +295,7 @@ export default function AboutSection() {
             { breakpoint: 1024, settings: { slidesToShow: 4 } },
             { breakpoint: 768, settings: { slidesToShow: 3 } },
             { breakpoint: 480, settings: { slidesToShow: 2 } },
+            { breakpoint: 320, settings: { slidesToShow: 1 } },
         ],
     };
 
@@ -312,18 +312,18 @@ export default function AboutSection() {
     if (!selectedAbout) return <p className="text-center py-20">Loading...</p>;
     return (
         <Layout>
-            <div className="space-y-20">
+            <div className="md:space-y-20">
                 {/* Hero Section */}
                 {selectedAbout.heroSection && (
                     <section
-                        className="bg-gray-50 text-center py-16 relative bg-[url('/images/managers-working.jpg')] bg-cover bg-center text-white">
+                        className="bg-gray-50 text-center md:py-16 relative bg-[url('/images/managers-working.jpg')] bg-cover bg-center text-white">
                         <div className="text-white py-20 px-4">
                             <div className="absolute inset-0 bg-black/60"></div>
                             <div className="overlay"></div>
-                            <h1 className="text-3xl md:text-4xl font-semibold mb-3 relative font-semibold z-2">
+                            <h1 className="text-2xl md:text-4xl font-semibold mb-3 relative font-semibold z-2">
                                 {selectedAbout.heroSection.title}
                             </h1>
-                            <p className="max-w-3xl mx-auto text-lg relative mt-3 z-2">
+                            <p className="max-w-3xl mx-auto md:text-lg relative mt-3 z-2">
                                 {selectedAbout.heroSection.subtitle}
                             </p>
                         </div>
@@ -332,19 +332,19 @@ export default function AboutSection() {
 
                 {/* Experience Section */}
                 {selectedAbout.experienceSection && (
-                    <section className="container mx-auto px-4 grid md:grid-cols-2 gap-10">
+                    <section className="container mx-auto px-4 grid md:grid-cols-2">
                         <div>
                             <img src="/images/business_team.jpg" alt="Accuvibe Team" className="rounded-lg shadow" />
                         </div>
                         <div>
-                            <h2 className="text-4xl font-semibold mb-10  title-main">
+                            <h2 className="text-2xl mt-5 md:mt-0 md:text-4xl font-semibold mb-5 md:mb-10  title-main">
                                 {selectedAbout.experienceSection.title}
                             </h2>
-                            <p className="text-gray-600 mb-10 text-lg leading-relaxed">
+                            <p className="text-gray-600 mb-5 md:mb-10 md:text-lg leading-relaxed">
                                 {selectedAbout.experienceSection.description}
                             </p>
                             {selectedAbout.experienceSection.highlights && selectedAbout.experienceSection.highlights.length > 0 && (
-                                <ul className="space-y-2 text-gray-700 text-lg list-disc list-inside">
+                                <ul className="space-y-2 text-gray-700 text-sm md:text-lg list-disc list-inside">
                                     {selectedAbout.experienceSection.highlights.map((item: string, index: number) => (
                                         <li key={index}>{item}</li>
                                     ))}
@@ -355,11 +355,11 @@ export default function AboutSection() {
                 )}
 
                 {selectedAbout?.securitySection && (
-                    <section className="max-w-7xl mx-auto py-10 px-4">
+                    <section className="max-w-7xl mx-auto py-5 md:py-10 px-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                             {/* LEFT BOX */}
-                            <div className="group bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                            <div className="group bg-blue-100 p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                                 <div className="mb-5 flex justify-center">
                                     <svg
                                         className="w-12 h-12 text-blue-600 group-hover:scale-105 transition-transform"
@@ -386,7 +386,7 @@ export default function AboutSection() {
                             </div>
 
                             {/* RIGHT BOX */}
-                            <div className="group bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                            <div className="group bg-green-200 p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
                                 <div className="mb-5 flex justify-center">
                                     <svg
                                         className="w-12 h-12 text-green-600 group-hover:scale-105 transition-transform"
@@ -417,9 +417,9 @@ export default function AboutSection() {
                 )
                 }
 
-                {selectedAbout.resultsSection && <section className="bg-blue-50 py-20 px-32 text-center">
-                    <h2 className="text-2xl font-semibold mb-20 title-main">{selectedAbout.resultsSection.title}</h2>
-                    <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+                {selectedAbout.resultsSection && <section className="bg-blue-50 py-10 px-10 md:py-20 md:px-32 text-center">
+                    <h2 className="text-2xl font-semibold mb-10 md:mb-20 title-main">{selectedAbout.resultsSection.title}</h2>
+                    <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
                         {selectedAbout.resultsSection.stats.map(({ value, label }: { value: string | number; label: string }) => (
                             <div key={value} className="bg-white p-6 rounded-lg shadow-sm">
                                 <p className="text-2xl font-bold text-blue-600">{value}</p>
@@ -433,17 +433,17 @@ export default function AboutSection() {
                     <section className="max-w-6xl mx-auto px-6">
 
                         {/* Title */}
-                        <h2 className="text-3xl md:text-4xl font-bold title-main text-center text-gray-900 mb-20">
+                        <h2 className="text-2xl md:text-4xl font-bold title-main text-center text-gray-900 mb-10 md:mb-20">
                             {selectedAbout.challengesSection.title}
                         </h2>
 
-                        <div className="grid md:grid-cols-2 gap-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
                             {(selectedAbout.challengesSection?.columns ?? []).map(
                                 ({ heading, items }: { heading: string; items?: ReactNode[] }) => (
                                     <div
                                         key={heading}
-                                        className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all"
+                                        className="bg-white p-3 md:p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all"
                                     >
                                         {/* Card Header + Icon */}
                                         <div className="flex items-center gap-3 mb-6">
@@ -463,7 +463,7 @@ export default function AboutSection() {
                                                 </svg>
                                             </div>
 
-                                            <h3 className="text-xl font-semibold title-main text-gray-900">
+                                            <h3 className="text-lg md:text-xl font-semibold title-main text-gray-900">
                                                 {heading}
                                             </h3>
                                         </div>
@@ -475,7 +475,7 @@ export default function AboutSection() {
                                                     key={idx}
                                                     className="flex items-start gap-2 text-gray-700 leading-relaxed"
                                                 >
-                                                    <span className="text-blue-500 text-lg">•</span>
+                                                    <span className="text-blue-500 text-md   md:text-lg">•</span>
                                                     {list}
                                                 </li>
                                             ))}
@@ -489,17 +489,17 @@ export default function AboutSection() {
                 )}
 
 
-                {selectedAbout.industriesSection && <section className="bg-gray-50 py-20">
+                {selectedAbout.industriesSection && <section className="bg-gray-50 py-10 md:py-20">
                     <div className="container mx-auto">
-                        <h2 className="text-4xl font-semibold text-center title-main mb-20">
+                        <h2 className="text-2xl md:text-4xl font-semibold text-center title-main mb-10 md:mb-20">
                             {selectedAbout.industriesSection.title}
                         </h2>
 
-                        <div className="grid md:grid-cols-1 gap-6 mb-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:mb-10">
                             <Slider {...settings}>
                                 {selectedAbout.industriesSection.cards.map(({ title, description }: { title: string; description: string }) => (
                                     <div key={title} className="px-4">  {/* ← GAP between cards */}
-                                        <div className="h-full w-full p-6 bg-white rounded-xl shadow-lg border flex flex-col justify-start min-h-[200px] max-h-[260px]">
+                                        <div className="h-full w-full p-6 bg-white rounded-xl shadow-lg border flex flex-col justify-start md:min-h-[200px] md:max-h-[260px]">
                                             <p className="font-bold mb-4 text-center text-xl bg-gradient-to-r from-indigo-500 to-blue-500 text-transparent bg-clip-text">{title}</p>
                                             <p className="text-gray-700 text-center">{description}</p>
                                         </div>
@@ -512,41 +512,41 @@ export default function AboutSection() {
 
                 {/* Process Section */}
                 {selectedAbout.processSection && (
-                    <section className="py-24 bg-gray-50">
-                        <div className="container mx-auto px-6">
-                            <div className="py-20">
+                    <section className="md:py-24 bg-gray-50">
+                        <div className="container mx-auto md:px-6">
+                            <div className="py-10 md:py-20">
                                 {/* Main Title */}
-                                <h3 className="text-4xl font-extrabold text-gray-900 text-center mb-6 title-main">
+                                <h3 className="text-2xl md:text-4xl font-extrabold text-gray-900 text-center mb-6 title-main">
                                     {selectedAbout.processSection.title}
                                 </h3>
 
                                 {/* Main Description */}
-                                <p className="text-gray-600 text-lg max-w-3xl mx-auto text-center mb-14 leading-relaxed">
+                                <p className="text-gray-600 text-lg max-w-3xl mx-auto text-center md:mb-14 leading-relaxed">
                                     {selectedAbout.processSection.description}
                                 </p>
                             </div>
                             {/* Subtitle */}
-                            <h4 className="text-3xl font-semibold text-gray-800 text-center mb-3 title-main">
+                            <h4 className="text-2xl md:text-3xl px-2 font-semibold text-gray-800 text-center mb-3 title-main">
                                 {selectedAbout.processSection.subTitle}
                             </h4>
 
                             {/* Sub Description */}
-                            <p className="text-gray-600 max-w-6xl mx-auto text-center mb-16 leading-relaxed">
+                            <p className="text-gray-600 max-w-6xl px-2 mx-auto text-center mb-16 leading-relaxed">
                                 {selectedAbout.processSection.subDescription}
                             </p>
 
                             {/* Steps Grid */}
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-1">
+                            <div className="grid grid-cols-1 md:grid-cols-2">
                                 <Slider {...settings}>
                                     {selectedAbout.processSection.steps.map((step: { title: string | number | bigint | boolean | ReactElement<unknown, string> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string> | Iterable<ReactNode> | null | undefined> | null | undefined; content: string | number | bigint | boolean | ReactElement<unknown, string> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: number) => (
-                                        <div key={index} className="px-5 py-5 h-[300px]">
+                                        <div key={index} className="px-5 py-5 md:h-[300px]">
                                             <div
-                                                className="bg-white rounded-2xl p-8 h-full w-full min-h-[200px] max-h-[260px] shadow-sm border 
+                                                className="bg-white rounded-2xl p-8 h-full w-full md:min-h-[200px] md:max-h-[260px] shadow-sm border 
                                    hover:shadow-xl hover:-translate-y-2 
                                    transition-all duration-300 cursor-default"
                                             >
                                                 {/* Step Title */}
-                                                <h5 className="text-blue-600 font-bold text-2xl mb-4">
+                                                <h5 className="text-blue-600 font-bold md:text-2xl mb-4">
                                                     {step.title}
                                                 </h5>
 
@@ -571,11 +571,11 @@ export default function AboutSection() {
 
                 {/* Flexible Hiring Section */}
                 {selectedAbout?.flexibleHiring && (
-                    <section className="py-24 bg-gray-50">
-                        <div className="container mx-auto px-6">
+                    <section className="py-10 md:py-24 bg-gray-50">
+                        <div className="container mx-auto px-2 md:px-6">
 
                             {/* Section Title */}
-                            <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-6">
+                            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 text-center mb-6">
                                 {selectedAbout.flexibleHiring.title}
                             </h2>
 
@@ -616,11 +616,11 @@ export default function AboutSection() {
 
                 {/* Outsource Model Section */}
                 {selectedAbout?.outsourceModel && (
-                    <section className="bg-blue-50 py-24 relative overflow-hidden">
-                        <div className="container mx-auto px-6">
+                    <section className="bg-blue-50 py-10 md:py-24 relative overflow-hidden">
+                        <div className="container mx-auto px-2 md:px-6">
 
                             {/* Section Heading */}
-                            <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-6">
+                            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 text-center mb-6">
                                 {selectedAbout.outsourceModel.title}
                             </h2>
 
@@ -668,11 +668,11 @@ export default function AboutSection() {
 
                 {/* Engagement Section */}
                 {selectedAbout?.engagementSection && (
-                    <section className="relative py-24 bg-gradient-to-b from-white to-blue-50/30">
-                        <div className="container mx-auto px-6">
+                    <section className="relative py-10 md:py-24 bg-gradient-to-b from-white to-blue-50/30">
+                        <div className="container mx-auto px-2 md:px-6">
 
                             {/* Main Title */}
-                            <h2 className="text-4xl font-extrabold text-center text-gray-900 mb-6">
+                            <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-900 mb-6">
                                 {selectedAbout.engagementSection.title}
                             </h2>
 
