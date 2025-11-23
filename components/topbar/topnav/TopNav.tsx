@@ -76,7 +76,7 @@ const services: Record<ServiceCategory, ServiceItem[]> = {
 
 export default function TopNav() {
     const [openMenu, setOpenMenu] = useState<string | null>(null);
-    const [icon, setIcon] = useState<Boolean>(false);
+    const [icon, setIcon] = useState<boolean>(false);
     const [activeCategory, setActiveCategory] = useState<ServiceCategory>("Business Owners");
 
     const toggleMenu = (menu: string) => {
