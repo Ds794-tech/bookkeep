@@ -1,4 +1,5 @@
 import { servicesList } from "@/app/utils";
+import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
@@ -124,7 +125,7 @@ export default function Footer() {
             <br />
             <div className="flex justify-end mt-2">
               <span className="cursor-pointer hover:text-gray-200">Sitemap </span>&nbsp; |
-              <span className="cursor-pointer hover:text-gray-200"><a href="/privacy-policy">&nbsp; Privacy Policy</a></span>
+              <span className="cursor-pointer hover:text-gray-200"><Link href="/privacy-policy">&nbsp; Privacy Policy</Link></span>
             </div>
           </div>
         </div>
