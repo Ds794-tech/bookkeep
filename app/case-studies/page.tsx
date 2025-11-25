@@ -6,13 +6,13 @@ import Link from 'next/link'
 export default function CaseStudies() {
     return (
         <Layout>
-            <div className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+            <div className="md:py-20 bg-gradient-to-b from-gray-50 to-gray-100">
 
-                <h1 className="text-4xl md:text-4xl font-extrabold title-main py-20  text-center mb-16 
+                <h1 className="text-2xl md:text-4xl font-extrabold title-main px-1 py-10 md:py-20  text-center md:mb-16 
                                 text-gray-900 tracking-tight">
                     Accuvibe Advisor — Case Studies
                 </h1>
-                <section className="py-20 bg-white">
+                <section className="py-10 md:py-20 bg-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
                             {caseStudy.caseStudies.map((c, i) => (

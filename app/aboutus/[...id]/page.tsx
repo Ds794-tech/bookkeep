@@ -332,11 +332,11 @@ export default function AboutSection() {
 
                 {/* Experience Section */}
                 {selectedAbout.experienceSection && (
-                    <section className="container mx-auto px-4 grid md:grid-cols-2">
+                    <section className="container mx-auto mt-2 md:mt-0 md:px-4 grid md:grid-cols-2">
                         <div>
-                            <img src="/images/business_team.jpg" alt="Accuvibe Team" className="rounded-lg shadow" />
+                            <img src="/images/business_team.jpg" alt="Accuvibe Team" className="md:rounded-lg md:shadow w-full" />
                         </div>
-                        <div>
+                        <div className="px-4 md:px-0">
                             <h2 className="text-2xl mt-5 md:mt-0 md:text-4xl font-semibold mb-5 md:mb-10  title-main">
                                 {selectedAbout.experienceSection.title}
                             </h2>

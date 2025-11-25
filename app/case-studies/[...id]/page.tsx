@@ -20,11 +20,11 @@ export default function CaseStudyDetail() {
 
     return (
         <Layout>
-            <div className="py-16 bg-gray-50">
+            <div className="py-10 md:py-16 bg-gray-50">
                 <div className="max-w-5xl mx-auto px-4">
 
                     {/* Title Section */}
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <h1 className="text-xl md:text-4xl font-bold text-gray-900 mb-4">
                         {study.title}
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 mb-10">

@@ -314,7 +314,7 @@ export default function TopNav() {
                 </nav>
 
                 {/* CTA Button */}
-                <div className="bg-[#123463] hidden md:block text-white p-4 shadow-md flex items-center justify-center space-x-4 md:w-fit">
+                <div className="bg-[#123463] hidden md:block lg:flex text-white p-4 shadow-md flex items-center justify-center space-x-4 md:w-fit">
                     {/* Icon */}
                     <FiMessageSquare className="text-teal-400 text-4xl" />
 
